@@ -1,11 +1,17 @@
-\documentclass{tikzposter} %Options for format can be included here
+\documentclass[a0paper,25pt]{tikzposter} %Options for format can be included here
 \usepackage{pgfplots}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{amsthm}
+
+\newtheorem*{mydef}{Definition}
+\newtheorem{theorem}{Theorem}
 
 \renewcommand\Re{\mathop{\rm Re}\nolimits}
 \renewcommand\Im{\mathop{\rm Im}\nolimits}
+
+
 
  % Title, Author, Institute
 \title{
@@ -19,21 +25,38 @@ with Bessel-type singularity inside an interval
 %\titlegraphic{LogoGraphic Inserted Here}
 
  %Choose Layout
-\usetheme{Default}
+%\usetheme{Default}
+
+%\usetheme{Board}
+%\usecolorstyle{Russia}
+\tikzposterlatexaffectionproofoff
 
 \begin{document}
 
  % Title block with title, author, logo, etc.
 \maketitle
 
- \block{What is Inverse Problems?}
-{
+\begin{columns}
+
+\column{0.5}
+
+\block{What is Inverse Problems?}{
+\innerblock{What is Inverse Problems?}{Solution of an inverse problem entails determining unknown causes, based on observation of their effects.}
 Solution of an inverse problem entails determining unknown causes, based on observation of their effects.
 
 Inverse problem: causes -> consequences (observations, effects, results)
 
 Direct problem: consequences -> causes
+
+\begin{tikzfigure}[A figure can be made withoes not work]
+\includegraphics[scale=1]{Neptune.pdf}
+\end{tikzfigure}
+
 }
+
+
+
+\column{0.5}
 
 \block{First Result in Spectral Inverse Problems Theory}{
 The field of inverse problems was first discovered and introduced by Soviet-Armenian physicist, Viktor Ambartsumian.
@@ -43,26 +66,81 @@ While still a student, Ambartsumian thoroughly studied the theory of atomic stru
 Nonetheless, toward the end of the Second World War, this article, written by the 20-year-old Ambartsumian, was found by Swedish mathematicians and formed the starting point for a whole area of research on inverse problems, becoming the foundation of an entire discipline.
 }
 
-\block{}{
+%\block{}{
+%\begin{tikzfigure}[A figure can be made withoes not work]
+%\includegraphics[scale=1]{Neptune.pdf}
+%\end{tikzfigure}
+%}
 
-\begin{tikzfigure}[A figure can be made withoes not work]
-\includegraphics[scale=1]{Neptune.pdf}
-\includegraphics[scale=1]{spectra.pdf}
-\begin{tikzpicture}[scale=1]
-\draw [->, color=gray,thick] (0,0) node[below] {$0$}-- (5,0) node[below] {$x$};
-\node[shape=circle,fill=red,scale=0.3] at (2,0) {};
-\node[below,color=gray] at (2,-0.1) {$a$};
-\end{tikzpicture}
-\end{tikzfigure}
+\end{columns}
+
+
+
+ \begin{columns}
+
+ % FIRST column
+\column{0.5}% Width set relative to text width
+
+
+\block{jkhkjh}{
+Let the function $\Phi(x,\lambda)$ be a solution of \eqref{initeq} under conditions
+\[
+\Phi(0,\lambda)=1, \quad\Phi(x,\lambda)=O(e^{i\rho x}),\quad x\to\infty. %\quad \rho\in\Omega.
+\]
+where $\Im\rho\geq0$, $\rho\neq0$.
+
+WHAT IS ${\cal L}$??????
+%$\Phi(0,\lambda)=1$, $\Phi(x,\lambda)=O(\exp(i\rho x))$, $x\to\infty$, $\rho\in\Omega$. 
+\innerblock{}{
+Function $\Phi(x,\lambda)$ is called the \textit{Weyl solution} for ${\cal L}$.
+}
+\innerblock{}{
+The function $M(\lambda):=\Phi'(0,\lambda)$ is called the {\it Weyl function} for ${\cal L}$.
 }
 
+
+\innerblock[titleleft]{Inverse Problem}{
+Recover $q(x)$ by the given Weyl function $M(\lambda)$.
+}
+}
+
+
+ 
+
+
+
+
+%\block{hghgjhg}{
+%\begin{tikzfigure}[A figure can be made withoes not work]
+%\includegraphics[scale=1]{Neptune.pdf}
+%\includegraphics[scale=1]{spectra.pdf}
+%\begin{tikzpicture}[scale=1]
+%\draw [->, color=gray,thick] (0,0) node[below] {$0$}-- (5,0) node[below] {$x$};
+%\node[shape=circle,fill=red,scale=0.3] at (2,0) {};
+%\node[below,color=gray] at (2,-0.1) {$a$};
+%\end{tikzpicture}
+%\end{tikzfigure}
+%}
+
+\block{hgjhgjhgjhg}{
+An interesting kind of generalization of Bessel equation is ...
+It can be easily obtained by taking a substitution...
+}
 \block{Object}{
 Consider the differential equation
 \begin{equation}
 \ell y = -y''+\Big(\frac{\nu_0}{(x-a)^2}+q(x)\Big)y=\lambda y,\quad x>0,
 \label{initeq}
 \end{equation}
-on the half-line with a Bessel-type singularity at an interior point $a>0$. Here $q(x)$ is a complex-valued function and $\nu_0$ is a complex number. Let $\nu_0=\nu^2-1/4$ and to be definite, we assume that  $Re\,\nu>0,$ $\nu\neq 1,2,\ldots$ (the other cases require minor modifications). We also assume that $q(x)|x-~a|^{\min(0,1-2Re\,\nu)} \in L(0,T)$ for some $T>a$ and $q(x)\in L(T,\infty)$. We denote the class of such functions $q(x)$ by $W$.
+on the half-line with a Bessel-type singularity at an interior point $a>0$. 
+\begin{tikzfigure}[Some caption]
+\begin{tikzpicture}[scale=1]
+\draw [->, color=gray,thick] (0,0) node[below] {$0$}-- (5,0) node[below] {$x$};
+\node[shape=circle,fill=red,scale=0.3] at (2,0) {};
+\node[below,color=gray] at (2,-0.1) {$a$};
+\end{tikzpicture}
+\end{tikzfigure}
+Here $q(x)$ is a complex-valued function and $\nu_0$ is a complex number. Let $\nu_0=\nu^2-1/4$ and to be definite, we assume that  $Re\,\nu>0,$ $\nu\neq 1,2,\ldots$ (the other cases require minor modifications). We also assume that $q(x)|x-~a|^{\min(0,1-2Re\,\nu)} \in L(0,T)$ for some $T>a$ and $q(x)\in L(T,\infty)$. We denote the class of such functions $q(x)$ by $W$.
 
 CHANGE THIS!!!!!!!!!!
 
@@ -75,11 +153,76 @@ WHAT IS matching conditions!
 WHAT IS WEYL FUNCTION!
 }
 
+\column{0.5}
+ %Second column with first block's top edge aligned with with previous column's top.
+\block{What is Matching Conditions?}{Let $\lambda=\rho^2$ and $\mathrm{Im}\,\rho\geq0$. Consider the functions
+\[
+C_j(x,\lambda)=(x-a)^{\mu_j} \sum^\infty_{k=0} c_{jk}(\rho (x-a))^{2k} ,\; j=1,2,
+\]
+where $c_{10}c_{20}=(2\nu)^{-1}$,
+\[
+\mu_j=(-1)^j\nu+1/2,\, c_{jk}=(-1)^k c_{j0}
+\,\Big( \prod^k_{s=1} ((2s+\mu_j)(2s+\mu_j-1)-\nu_0)\Big)^{-1}.
+\]
+Here and below $z^{\mu}=\exp(\mu(\mbox{ln}|z|+i\arg z))$, $\arg z \in (-\pi, \pi]$. If $x>a$ or $x<a$ then the functions
+ $C_j(x,\lambda)$ are solutions of \eqref{initeq} with $q(x)\equiv 0$. Let the functions $s_j(x,\lambda)$, $j=1,2$ be solutions of the following integral equations for $x>a$ and $x<a$: 
+\[
+s_j(x,\lambda)=C_j(x,\lambda)+\int^x_{a} g(x,t,\lambda)q(t)s_j(t,\lambda)\,dt,
+\]
+where $g(x,t,\lambda)=C_1(t,\lambda)C_2(x,\lambda)-C_1(x,\lambda)C_2(t,\lambda)$. For each fixed $x$ the functions $s_j(x,\lambda)$ are entire in $\lambda$ of order 1/2 and form a fundamental system of solutions of \eqref{initeq}. Moreover 
+\begin{equation}
+\det[s_j^{(m-1)}(x,\lambda)]_{j,m=\overline{1,2}}\equiv 1. 
+\label{detsj}        
+\end{equation} 
+
+Let $A=[a_{jk}]_{j,k=1,2}$, $\det A\ne 0$ be a given matrix with complex numbers $a_{jk}$. We introduce the functions  $\{\sigma_j(x,\lambda)\}_{j=1,2}$, $x\in J_{-}\cup J_{+}$, $J_{\pm}=\{\pm (x-a)>0\}$ by the formula
+\begin{equation*}
+\sigma_j(x,\lambda)=\left\{
+\begin{array}{ll}
+s_j(x,\lambda), & x\in J_{-},\\
+\sum\limits_{k=1}^{2}a_{kj}s_k(x,\lambda),&  x\in J_{+}.
+\end{array}\right.
+\label{sigmajinsk}
+\end{equation*}
+The fundamental system of solutions $\{\sigma_j(x,\lambda)\}$ is used to match solutions in a neighborhood of the singular point  $x=a$. It follows from \eqref{detsj} that
+\begin{equation}
+\det[\sigma_j^{(m-1)}(x,\lambda)]_{j,m=1,2}\equiv
+\left\{ \begin{array}{ll}
+1,\quad & x\in J_{-}, \\ \det A,\quad & x\in J_{+}.
+\end{array}\right. 
+\label{detsigmaj}                
+\end{equation}
+
+We introduce numbers $\xi_{jk}$, $j,k=1,2$ by
+\begin{equation}
+\left[ \begin{array}{ll}
+\xi_{11} & \xi_{12} \\ \xi_{21} & \xi_{22}
+\end{array}\right]= \frac{1}{2\sin\pi\nu}
+\left[ \begin{array}{ll}
+-a_{11}e^{2\pi i\nu}+a_{22}e^{-2\pi i\nu} & -i(a_{11}e^{\pi i\nu}-a_{22}e^{-\pi i\nu}) \\
+-i(a_{11}e^{\pi i\nu}-a_{22}e^{-\pi i\nu}) & a_{11}-a_{22} 
+\end{array}\right] .    
+\label{ksimatrix}
+\end{equation}       
+The behaviour of the spectrum of the boundary value problem ${\cal L}$ depends on the numbers $\xi_{jk}$. We consider the most difficult special case in which $|\xi_{jj}|>|\xi_{12}|>0$, since in this case the discrete spectrum is unbounded and essential qualitative modifications in the investigation of the direct and inverse problems are arised. 
+To be definite we set $a_{12}=0$ (the other case requires minor modifications).
+\begin{tikzfigure}[A figure can be made withoes not work]
+\includegraphics[scale=1]{spectra.pdf}
+\end{tikzfigure}
+}
+
 \block{Using Method of Spectral Mappings}{
-{\bf Theorem 4. }{\it If $M(\lambda)=\widetilde M(\lambda)$, then $q(x)=\tilde q(x)$ a.e. for $x>0$. Thus, the Weyl function uniquely determines the boundary value problem $\cal L$. }
+\innerblock[titleleft]{Uniqueness Theorem}{
+%If $M(\lambda)=\widetilde M(\lambda)$, then $q(x)=\tilde q(x)$ almost everywhere for $x>0$. Thus, the Weyl function uniquely determines the boundary value problem $\cal L$.
+The Weyl function uniquely determines the boundary value problem $\cal L$.
+}
 }
 
 
+
+ \end{columns}
+
+\end{document}
 
  \begin{columns}
 
