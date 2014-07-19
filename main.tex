@@ -4,6 +4,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage[all]{xy}
 
 \newtheorem*{mydef}{Definition}
 \newtheorem{theorem}{Theorem}
@@ -63,7 +64,28 @@ During the fifteen years nobody has taken notice of that paper. However in 1944 
 %(Ambartsumian said ``when an \textit{astronomer} is publishing a \textit{mathematical} paper in a \textit{physical} journal, he cannon expect to attract too many readers'')
 }
 
+
+\usetikzlibrary{positioning,arrows}
 \block{What is Inverse Problems?}{
+Inverse problems are concerned with determining causes for a desired or an observed effect.
+
+\
+
+\[
+\xymatrix{\mbox{Cause}&&&&&&\mbox{Effect}\ar@/_40pt/@{<-}[llllll]_{\mbox{Direct Problem}}\ar@/^40pt/@{->}[llllll]^{\mbox{Inverse Problem}}}
+\]
+
+\
+
+\[
+\xymatrix{\parbox[c]{340pt}{\centering \textbf{Cause}\\ (Parameter, Potential, ...)}&&&&&&\parbox[c]{320pt}{\centering \textbf{Effect}\\ (Data, Observations, ...)}\ar@/_40pt/@{<-}[llllll]_{\mbox{Direct Problem}}\ar@/^40pt/@{->}[llllll]^{\mbox{Inverse Problem}}}
+\]
+
+
+\
+
+\
+
 \innerblock{What is Inverse Problems?}{Solution of an inverse problem entails determining unknown causes, based on observation of their effects.}
 Solution of an inverse problem entails determining unknown causes, based on observation of their effects.
 
@@ -81,7 +103,7 @@ Direct problem: consequences -> causes
 
 \column{0.5}
 
-\block{First Result in Spectral Inverse Problems Theory}{
+\block{First Result in Inverse Spectral Problems Theory}{
 
 TAKE FROM document.pdf Part 2 Inverse problems!!!!!!!!!!!!!!!!11
 !!!!!!!!!!!!!!!!!!!!!!!1
