@@ -5,6 +5,28 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage[all]{xy}
+\SelectTips{eu}{12}
+
+\usetikzlibrary{arrows,positioning,arrows.meta} 
+\tikzset{
+    %Define standard arrow tip
+    %>=stealth',
+    >={Latex[width=5mm,length=7mm]},
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=11.5em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,
+           shorten <=2pt,
+           shorten >=2pt,}
+}
 
 \newtheorem*{mydef}{Definition}
 \newtheorem{theorem}{Theorem}
@@ -69,22 +91,16 @@ During the fifteen years nobody has taken notice of that paper. However in 1944 
 \block{What is Inverse Problems?}{
 Inverse problems are concerned with determining causes for a desired or an observed effect.
 
-\
+\begin{tikzfigure}[]
+\begin{tikzpicture}[node distance=1cm, auto,]
+ \node (dummy) {};
+ \node[punkt, left = of dummy] (cause) {\textbf{Cause}\\(Data, Observations, ...)};
+ \node[punkt,right=of dummy]  (effect) {\textbf{Effect}\\(Parameter, Potential, ...)};
+ \draw (cause.north) edge[pil,->, bend left=45] node[auto] {Direct Problem} (effect.north);
+ \draw (effect.south) edge[pil,->, bend left=45] node[auto] {Inverse Problem} (cause.south);
+\end{tikzpicture}
+\end{tikzfigure}
 
-\[
-\xymatrix{\mbox{Cause}&&&&&&\mbox{Effect}\ar@/_40pt/@{<-}[llllll]_{\mbox{Direct Problem}}\ar@/^40pt/@{->}[llllll]^{\mbox{Inverse Problem}}}
-\]
-
-\
-
-\[
-\xymatrix{\parbox[c]{340pt}{\centering \textbf{Cause}\\ (Parameter, Potential, ...)}&&&&&&\parbox[c]{320pt}{\centering \textbf{Effect}\\ (Data, Observations, ...)}\ar@/_40pt/@{<-}[llllll]_{\mbox{Direct Problem}}\ar@/^40pt/@{->}[llllll]^{\mbox{Inverse Problem}}}
-\]
-
-
-\
-
-\
 
 \innerblock{What is Inverse Problems?}{Solution of an inverse problem entails determining unknown causes, based on observation of their effects.}
 Solution of an inverse problem entails determining unknown causes, based on observation of their effects.
