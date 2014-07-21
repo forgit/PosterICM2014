@@ -3,9 +3,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage[all]{xy}
-\SelectTips{eu}{12}
+%\usepackage{amsthm}
 
 \usetikzlibrary{arrows,positioning,arrows.meta} 
 \tikzset{
@@ -28,7 +26,7 @@
            shorten >=2pt,}
 }
 
-\newtheorem*{mydef}{Definition}
+%\newtheorem*{mydef}{Definition}
 \newtheorem{theorem}{Theorem}
 
 \renewcommand\Re{\mathop{\rm Re}\nolimits}
@@ -87,14 +85,18 @@ During the fifteen years nobody has taken notice of that paper. However in 1944 
 }
 
 
-\usetikzlibrary{positioning,arrows}
+
+
+
+\column{0.5}
+
 \block{What is Inverse Problems?}{
-Inverse problems are concerned with determining causes for a desired or an observed effect.
+\innerblock{}{Inverse problems are concerned with determining causes for a desired or an observed effect.}
 
 \begin{tikzfigure}[]
 \begin{tikzpicture}[node distance=1cm, auto,]
  \node (dummy) {};
- \node[punkt, left = of dummy] (cause) {\textbf{Cause}\\(Data, Observations, ...)};
+ \node[punkt, left = of dummy] (cause) {\textbf{Cause}\\(Data, Observation, ...)};
  \node[punkt,right=of dummy]  (effect) {\textbf{Effect}\\(Parameter, Potential, ...)};
  \draw (cause.north) edge[pil,->, bend left=45] node[auto] {Direct Problem} (effect.north);
  \draw (effect.south) edge[pil,->, bend left=45] node[auto] {Inverse Problem} (cause.south);
@@ -102,77 +104,74 @@ Inverse problems are concerned with determining causes for a desired or an obser
 \end{tikzfigure}
 
 
-\innerblock{What is Inverse Problems?}{Solution of an inverse problem entails determining unknown causes, based on observation of their effects.}
+\innerblock{What is Inverse Problems?}{
+Solution of an inverse problem entails determining unknown causes, based on observation of their effects.
+}
 Solution of an inverse problem entails determining unknown causes, based on observation of their effects.
 
-Inverse problem: causes -> consequences (observations, effects, results)
+The discovery of the planet Neptune is a famous example of an inverse problem. At the beginning of the 19th century, the most distant discovered planet was Uranus. When astronomers applied Newton's theory of universal gravitation to the movement of Uranus, the calculations did not match the observed orbit and movement. in 1844 a French mathematician Urbain Le Verrier began to labor away at this calculation, using inverse perturbations of features (mass, orbit, current position) of the hypothetical planet assumed to produce Uranus' observed irregularities. In his report to the Academy of Sciences on August 31, 1846, Le Verrier presented the orbital elements of this new planet. Then, on September 23 the Berlin astronomer Galle received from Le Verrier a letter detailing its predicted position and succeeded in observing the object.
 
-Direct problem: consequences -> causes
-
-\begin{tikzfigure}[A figure can be made withoes not work]
+\begin{tikzfigure}[Neptune]
 \includegraphics[scale=1]{Neptune.pdf}
 \end{tikzfigure}
 
 }
 
 
-
-\column{0.5}
-
-\block{First Result in Inverse Spectral Problems Theory}{
-
-TAKE FROM document.pdf Part 2 Inverse problems!!!!!!!!!!!!!!!!11
-!!!!!!!!!!!!!!!!!!!!!!!1
-
-\
-
-
-%The first result in the inverse problem theory is due to Ambartsumian (Ambartsumian V., \"Uber eine Frage der Eigenwerttheorie., Zeit. f\"ur Phys., 53 (1929), pp. 690--695).
-%Consider the boundary value problem $L(q(x),0,0),$ i.e.
-%\begin{equation}
-%-y''+q(x)y=\lambda y, \quad y'(0)=y'(\pi)=0.
-%\label{Ambartsumian}
-%\end{equation}
-%Clearly, if $q(x)=0$ a.e. on $(0,\pi),$ then the eigenvalues
-%of \eqref{Ambartsumian} have the form $\lambda_n=n^2$,$n\ge 0$.
-%Ambartsumian proved the inverse assertion:
-%
-%\innerblock[titleleft]{Theorem}
-%{If the eigenvalues of \eqref{Ambartsumian} are
-%$\lambda_n=n^2,\;n \ge 0,$ then $q(x)=0$ a.e. on $(0,\pi)$.}
-
-
-
-
-
-%Первый результат в теории обратных спектральных задач принадлежит советскому ученому, основателю теоретической астрофизики В.А. Амбарцумяну \cite{Ambarzumian1929}. Интересен вопрос о том, как он пришел к обратной задачи. В 1926 году Э. Шредингер опубликовал работы \cite{Schroedinger1926part1,Schroedinger1926part2,Schroedinger1926part3,Schroedinger1926part4,Schroedinger1926Heisenberg} по волновой механике. Он показал, что вопрос исследования энергетических уровней системы приводит к решению задач нахождения собственных значений некоторых дифференциальных уравнений.
-%% , то есть спектр энергетических уровней может быть получен с помощью вычисления спектра собственных значений этих уравнений.
-%% В.А. Амбарцумяна интересовало объяснение происхождения спектров атомов.
-%В астрофизике спектральный анализ атомов является одним из основных методов исследования небесных объектов. В.А. Амбарцумян хотел выяснить можно ли по наблюдаемым спектрам атомов однозначно узнать о строении и состоянии атома, что и является ``обратной'' задачей. Оказалось, что решение этой нелинейной задачи в общем случае весьма трудно.
-%% Тогда Амбарцумян упростил задачу: как частоты колебаний струны зависят от ее диаметра и других ее параметров? Но данная задача так же оказалась очень трудной.
-%Тогда он рассмотрел частный случай: можно ли утверждать, что система собственных частот, характерная для однородной струны, свойственна только ей и однозначно определяет ее среди всех струн? Ему удалось разрешить эту проблему и сформулировать следующий результат\cite{Ambarzumian1929} для уравнения Штурма-Лиувилля
-%\begin{equation}
-%-y''+q(x)y=\lambda y.
-%\label{intro:SLeq}
-%\end{equation}
-%Здесь $\lambda$ - спектральный параметр, $q(x)$, $x\in(0,\pi)$ - вещественная интегрируемая функция.
-%%, $q(x)\in L_2(0,\pi)$.
-%В.А. Амбарцумян показал, что если краевая задача для уравнения \eqref{intro:SLeq} с граничными условиями $y'(0)=y'(\pi)=0$ имеет собственные значения $\lambda_n=n^2$, $n\geq 0$, то $q(x)=0$. Однако этот результат является исключительным - в общем случае задания одного спектра недостаточно для восстановления потенциала $q(x)$.
-
-=================================================
-
-The field of inverse problems was first discovered and introduced by Soviet-Armenian physicist, Viktor Ambartsumian.
-
-While still a student, Ambartsumian thoroughly studied the theory of atomic structure, the formation of energy levels, and the Schr\"odinger equation and its properties, and when he mastered the theory of eigenvalues of differential equations, he pointed out the apparent analogy between discrete energy levels and the eigenvalues of differential equations. He then asked: given a family of eigenvalues, is it possible to find the form of the equations whose eigenvalues they are? Essentially Ambartsumian was examining the inverse Sturm-Liouville problem, which dealt with determining the equations of a vibrating string. This paper was published in 1929 in the German physics journal Zeitschrift f\"ur Physik and remained in obscurity for a rather long time (Ambartsumian V., {\it\"Uber eine Frage der Eigenwerttheorie.}, Zeit. f\"ur Phys., 53 (1929), pp. 690--695). Describing this situation after many decades, Ambartsumian said, "If an astronomer publishes an article with a mathematical content in a physics journal, then the most likely thing that will happen to it is oblivion."
-
-Nonetheless, toward the end of the Second World War, this article, written by the 20-year-old Ambartsumian, was found by Swedish mathematicians and formed the starting point for a whole area of research on inverse problems, becoming the foundation of an entire discipline.
-}
-
-%\block{}{
-%\begin{tikzfigure}[A figure can be made withoes not work]
-%\includegraphics[scale=1]{Neptune.pdf}
-%\end{tikzfigure}
-%}
+%%%%\block{First Result in Inverse Spectral Problems Theory}{
+%%%%
+%%%%TAKE FROM document.pdf Part 2 Inverse problems!!!!!!!!!!!!!!!!11
+%%%%!!!!!!!!!!!!!!!!!!!!!!!1
+%%%%
+%%%%\
+%%%%
+%%%%
+%%%%%The first result in the inverse problem theory is due to Ambartsumian (Ambartsumian V., \"Uber eine Frage der Eigenwerttheorie., Zeit. f\"ur Phys., 53 (1929), pp. 690--695).
+%%%%%Consider the boundary value problem $L(q(x),0,0),$ i.e.
+%%%%%\begin{equation}
+%%%%%-y''+q(x)y=\lambda y, \quad y'(0)=y'(\pi)=0.
+%%%%%\label{Ambartsumian}
+%%%%%\end{equation}
+%%%%%Clearly, if $q(x)=0$ a.e. on $(0,\pi),$ then the eigenvalues
+%%%%%of \eqref{Ambartsumian} have the form $\lambda_n=n^2$,$n\ge 0$.
+%%%%%Ambartsumian proved the inverse assertion:
+%%%%%
+%%%%%\innerblock[titleleft]{Theorem}
+%%%%%{If the eigenvalues of \eqref{Ambartsumian} are
+%%%%%$\lambda_n=n^2,\;n \ge 0,$ then $q(x)=0$ a.e. on $(0,\pi)$.}
+%%%%
+%%%%
+%%%%
+%%%%
+%%%%
+%%%%%Первый результат в теории обратных спектральных задач принадлежит советскому ученому, основателю теоретической астрофизики В.А. Амбарцумяну \cite{Ambarzumian1929}. Интересен вопрос о том, как он пришел к обратной задачи. В 1926 году Э. Шредингер опубликовал работы \cite{Schroedinger1926part1,Schroedinger1926part2,Schroedinger1926part3,Schroedinger1926part4,Schroedinger1926Heisenberg} по волновой механике. Он показал, что вопрос исследования энергетических уровней системы приводит к решению задач нахождения собственных значений некоторых дифференциальных уравнений.
+%%%%%% , то есть спектр энергетических уровней может быть получен с помощью вычисления спектра собственных значений этих уравнений.
+%%%%%% В.А. Амбарцумяна интересовало объяснение происхождения спектров атомов.
+%%%%%В астрофизике спектральный анализ атомов является одним из основных методов исследования небесных объектов. В.А. Амбарцумян хотел выяснить можно ли по наблюдаемым спектрам атомов однозначно узнать о строении и состоянии атома, что и является ``обратной'' задачей. Оказалось, что решение этой нелинейной задачи в общем случае весьма трудно.
+%%%%%% Тогда Амбарцумян упростил задачу: как частоты колебаний струны зависят от ее диаметра и других ее параметров? Но данная задача так же оказалась очень трудной.
+%%%%%Тогда он рассмотрел частный случай: можно ли утверждать, что система собственных частот, характерная для однородной струны, свойственна только ей и однозначно определяет ее среди всех струн? Ему удалось разрешить эту проблему и сформулировать следующий результат\cite{Ambarzumian1929} для уравнения Штурма-Лиувилля
+%%%%%\begin{equation}
+%%%%%-y''+q(x)y=\lambda y.
+%%%%%\label{intro:SLeq}
+%%%%%\end{equation}
+%%%%%Здесь $\lambda$ - спектральный параметр, $q(x)$, $x\in(0,\pi)$ - вещественная интегрируемая функция.
+%%%%%%, $q(x)\in L_2(0,\pi)$.
+%%%%%В.А. Амбарцумян показал, что если краевая задача для уравнения \eqref{intro:SLeq} с граничными условиями $y'(0)=y'(\pi)=0$ имеет собственные значения $\lambda_n=n^2$, $n\geq 0$, то $q(x)=0$. Однако этот результат является исключительным - в общем случае задания одного спектра недостаточно для восстановления потенциала $q(x)$.
+%%%%
+%%%%=================================================
+%%%%
+%%%%The field of inverse problems was first discovered and introduced by Soviet-Armenian physicist, Viktor Ambartsumian.
+%%%%
+%%%%While still a student, Ambartsumian thoroughly studied the theory of atomic structure, the formation of energy levels, and the Schr\"odinger equation and its properties, and when he mastered the theory of eigenvalues of differential equations, he pointed out the apparent analogy between discrete energy levels and the eigenvalues of differential equations. He then asked: given a family of eigenvalues, is it possible to find the form of the equations whose eigenvalues they are? Essentially Ambartsumian was examining the inverse Sturm-Liouville problem, which dealt with determining the equations of a vibrating string. This paper was published in 1929 in the German physics journal Zeitschrift f\"ur Physik and remained in obscurity for a rather long time (Ambartsumian V., {\it\"Uber eine Frage der Eigenwerttheorie.}, Zeit. f\"ur Phys., 53 (1929), pp. 690--695). Describing this situation after many decades, Ambartsumian said, "If an astronomer publishes an article with a mathematical content in a physics journal, then the most likely thing that will happen to it is oblivion."
+%%%%
+%%%%Nonetheless, toward the end of the Second World War, this article, written by the 20-year-old Ambartsumian, was found by Swedish mathematicians and formed the starting point for a whole area of research on inverse problems, becoming the foundation of an entire discipline.
+%%%%}
+%%%%
+%%%%%\block{}{
+%%%%%\begin{tikzfigure}[A figure can be made withoes not work]
+%%%%%\includegraphics[scale=1]{Neptune.pdf}
+%%%%%\end{tikzfigure}
+%%%%%}
 
 \end{columns}
 
