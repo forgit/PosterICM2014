@@ -61,35 +61,6 @@ with Bessel-type singularity inside an interval
 
 \column{0.5}
 
-
-\block{}{
-The inverse spectral problems theory was discovered and introduced by Soviet-Armenian astrophysicist Victor Ambartsumian.
-
-Just after his graduation from the University of Leningrad he was interested in what degree do the eigenvalues of an ordinary differential operator determine the functions and parameters entering into that operator? Ambartsumian published in 1929 in Zeitschrift f\"ur Physik a paper which contained the statement of the general problem and the proof of the theorem that among all strings the homogeneous string is uniquely defined by the set of its oscillation-frequencies.
-%does the empirical data of atomic physics (the frequencies of spectral lines, the transition probabilities, etc.) define the system of laws and rules of quantum mechanics or more specifically the form of the Schr\"odinger equation?
-Consider the boundary value problem
-\begin{equation}
--y''+q(x)y=\lambda y, \quad y'(0)=y'(\pi)=0.
-\label{Ambartsumian}
-\end{equation}
-Clearly, if $q(x)=0$ a.e. on $(0,\pi),$ then the eigenvalues
-of \eqref{Ambartsumian} have the form $\lambda_n=n^2$,$n\ge 0$.
-Ambartsumian proved the inverse assertion:
-
-\innerblock[titleleft]{Theorem}
-{If the eigenvalues of \eqref{Ambartsumian} are
-$\lambda_n=n^2,\;n \ge 0,$ then $q(x)=0$ a.e. on $(0,\pi)$.}
-
-During the fifteen years nobody has taken notice of that paper. However in 1944 that work was found by Swedish mathematicians who have obtained many interesting results related to the ''inverse Sturm-Liouville problem`` and thus that paper became the foundation of an entire discipline.
-%(Ambartsumian said ``when an \textit{astronomer} is publishing a \textit{mathematical} paper in a \textit{physical} journal, he cannon expect to attract too many readers'')
-}
-
-
-
-
-
-\column{0.5}
-
 \block{What is Inverse Problems?}{
 \innerblock{}{Inverse problems are concerned with determining causes for a desired or an observed effect.}
 
@@ -104,106 +75,78 @@ During the fifteen years nobody has taken notice of that paper. However in 1944 
 \end{tikzfigure}
 
 
-\innerblock{What is Inverse Problems?}{
-Solution of an inverse problem entails determining unknown causes, based on observation of their effects.
-}
-Solution of an inverse problem entails determining unknown causes, based on observation of their effects.
+%\innerblock{What is Inverse Problems?}{
+%Solution of an inverse problem entails determining unknown causes, based on observation of their effects.
+%}
+%Solution of an inverse problem entails determining unknown causes, based on observation of their effects.
 
-The discovery of the planet Neptune is a famous example of an inverse problem. At the beginning of the 19th century, the most distant discovered planet was Uranus. When astronomers applied Newton's theory of universal gravitation to the movement of Uranus, the calculations did not match the observed orbit and movement. in 1844 a French mathematician Urbain Le Verrier began to labor away at this calculation, using inverse perturbations of features (mass, orbit, current position) of the hypothetical planet assumed to produce Uranus' observed irregularities. In his report to the Academy of Sciences on August 31, 1846, Le Verrier presented the orbital elements of this new planet. Then, on September 23 the Berlin astronomer Galle received from Le Verrier a letter detailing its predicted position and succeeded in observing the object.
+
+The situation in which the parameters or sources are directly accessible by measurement is called direct measurement. However, in many cases, the information searched for is not directly measurable. Instead, it is physically connected to other measurable values. We call this situation indirect measurement. Though these measurable values are evidently dependent on the physics of the studied phenomenon, they are also dependent on the measurement instruments employed. The laws of physics that link observable information to the values searched for are generally mathematically complex, using, for example, integral equations or partial derivatives. The solution to a problem that calculates observable effects from unknown values, or a direct problem, is often simpler and more easily mastered than that of an inverse problem, which calculates unknown values from observable effects.
+}
+
+
+\block{Neptune}{
+The discovery of the planet Neptune is a famous example of an inverse problem. At the beginning of the 19th century, the most distant discovered planet was Uranus. When astronomers applied Newton's theory of universal gravitation to the movement of Uranus, the calculations did not match the observed orbit and movement. 
+
+
 
 \begin{tikzfigure}[Neptune]
-\includegraphics[scale=1]{Neptune.pdf}
+\includegraphics[scale=2]{Neptune.pdf}
 \end{tikzfigure}
 
+
+
+In 1844 a French mathematician Urbain Le Verrier began to labor away at this calculation, using inverse perturbations of features (mass, orbit, current position) of the hypothetical planet assumed to produce Uranus' observed irregularities. In his report to the Academy of Sciences on August 31, 1846, Le Verrier presented the orbital elements of this new planet. Then, on September 23 the Berlin astronomer Galle received from Le Verrier a letter detailing its predicted position and succeeded in observing the object.
 }
 
 
-%%%%\block{First Result in Inverse Spectral Problems Theory}{
-%%%%
-%%%%TAKE FROM document.pdf Part 2 Inverse problems!!!!!!!!!!!!!!!!11
-%%%%!!!!!!!!!!!!!!!!!!!!!!!1
-%%%%
-%%%%\
-%%%%
-%%%%
-%%%%%The first result in the inverse problem theory is due to Ambartsumian (Ambartsumian V., \"Uber eine Frage der Eigenwerttheorie., Zeit. f\"ur Phys., 53 (1929), pp. 690--695).
-%%%%%Consider the boundary value problem $L(q(x),0,0),$ i.e.
-%%%%%\begin{equation}
-%%%%%-y''+q(x)y=\lambda y, \quad y'(0)=y'(\pi)=0.
-%%%%%\label{Ambartsumian}
-%%%%%\end{equation}
-%%%%%Clearly, if $q(x)=0$ a.e. on $(0,\pi),$ then the eigenvalues
-%%%%%of \eqref{Ambartsumian} have the form $\lambda_n=n^2$,$n\ge 0$.
-%%%%%Ambartsumian proved the inverse assertion:
-%%%%%
-%%%%%\innerblock[titleleft]{Theorem}
-%%%%%{If the eigenvalues of \eqref{Ambartsumian} are
-%%%%%$\lambda_n=n^2,\;n \ge 0,$ then $q(x)=0$ a.e. on $(0,\pi)$.}
-%%%%
-%%%%
-%%%%
-%%%%
-%%%%
-%%%%%Первый результат в теории обратных спектральных задач принадлежит советскому ученому, основателю теоретической астрофизики В.А. Амбарцумяну \cite{Ambarzumian1929}. Интересен вопрос о том, как он пришел к обратной задачи. В 1926 году Э. Шредингер опубликовал работы \cite{Schroedinger1926part1,Schroedinger1926part2,Schroedinger1926part3,Schroedinger1926part4,Schroedinger1926Heisenberg} по волновой механике. Он показал, что вопрос исследования энергетических уровней системы приводит к решению задач нахождения собственных значений некоторых дифференциальных уравнений.
-%%%%%% , то есть спектр энергетических уровней может быть получен с помощью вычисления спектра собственных значений этих уравнений.
-%%%%%% В.А. Амбарцумяна интересовало объяснение происхождения спектров атомов.
-%%%%%В астрофизике спектральный анализ атомов является одним из основных методов исследования небесных объектов. В.А. Амбарцумян хотел выяснить можно ли по наблюдаемым спектрам атомов однозначно узнать о строении и состоянии атома, что и является ``обратной'' задачей. Оказалось, что решение этой нелинейной задачи в общем случае весьма трудно.
-%%%%%% Тогда Амбарцумян упростил задачу: как частоты колебаний струны зависят от ее диаметра и других ее параметров? Но данная задача так же оказалась очень трудной.
-%%%%%Тогда он рассмотрел частный случай: можно ли утверждать, что система собственных частот, характерная для однородной струны, свойственна только ей и однозначно определяет ее среди всех струн? Ему удалось разрешить эту проблему и сформулировать следующий результат\cite{Ambarzumian1929} для уравнения Штурма-Лиувилля
-%%%%%\begin{equation}
-%%%%%-y''+q(x)y=\lambda y.
-%%%%%\label{intro:SLeq}
-%%%%%\end{equation}
-%%%%%Здесь $\lambda$ - спектральный параметр, $q(x)$, $x\in(0,\pi)$ - вещественная интегрируемая функция.
-%%%%%%, $q(x)\in L_2(0,\pi)$.
-%%%%%В.А. Амбарцумян показал, что если краевая задача для уравнения \eqref{intro:SLeq} с граничными условиями $y'(0)=y'(\pi)=0$ имеет собственные значения $\lambda_n=n^2$, $n\geq 0$, то $q(x)=0$. Однако этот результат является исключительным - в общем случае задания одного спектра недостаточно для восстановления потенциала $q(x)$.
-%%%%
-%%%%=================================================
-%%%%
-%%%%The field of inverse problems was first discovered and introduced by Soviet-Armenian physicist, Viktor Ambartsumian.
-%%%%
-%%%%While still a student, Ambartsumian thoroughly studied the theory of atomic structure, the formation of energy levels, and the Schr\"odinger equation and its properties, and when he mastered the theory of eigenvalues of differential equations, he pointed out the apparent analogy between discrete energy levels and the eigenvalues of differential equations. He then asked: given a family of eigenvalues, is it possible to find the form of the equations whose eigenvalues they are? Essentially Ambartsumian was examining the inverse Sturm-Liouville problem, which dealt with determining the equations of a vibrating string. This paper was published in 1929 in the German physics journal Zeitschrift f\"ur Physik and remained in obscurity for a rather long time (Ambartsumian V., {\it\"Uber eine Frage der Eigenwerttheorie.}, Zeit. f\"ur Phys., 53 (1929), pp. 690--695). Describing this situation after many decades, Ambartsumian said, "If an astronomer publishes an article with a mathematical content in a physics journal, then the most likely thing that will happen to it is oblivion."
-%%%%
-%%%%Nonetheless, toward the end of the Second World War, this article, written by the 20-year-old Ambartsumian, was found by Swedish mathematicians and formed the starting point for a whole area of research on inverse problems, becoming the foundation of an entire discipline.
-%%%%}
-%%%%
-%%%%%\block{}{
-%%%%%\begin{tikzfigure}[A figure can be made withoes not work]
-%%%%%\includegraphics[scale=1]{Neptune.pdf}
-%%%%%\end{tikzfigure}
-%%%%%}
 
-\end{columns}
+\block{First Result}{
+The inverse spectral problems theory was discovered and introduced by Soviet-Armenian astrophysicist Victor Ambartsumian.
+
+Just after his graduation from the University of Leningrad he was interested in what degree do the eigenvalues of an ordinary differential operator determine the functions and parameters entering into that operator? Ambartsumian published in 1929 in Zeitschrift f\"ur Physik a paper which contained the statement of the general problem and the proof of the theorem that among all strings the homogeneous string is uniquely defined by the set of its oscillation-frequencies.
+
+\
+
+\innerblock[titleleft]{Theorem}{
+Consider the boundary value problem
+\begin{equation}
+-y''+q(x)y=\lambda y, \quad y'(0)=y'(\pi)=0.
+\label{Ambartsumian}
+\end{equation}
+%Clearly, if $q(x)=0$ a.e. on $(0,\pi),$ then the eigenvalues of \eqref{Ambartsumian} have the form $\lambda_n=n^2$,$n\ge 0$. Ambartsumian proved the inverse assertion:
+
+%\innerblock[titleleft]{Theorem}{
+%If the eigenvalues of \eqref{Ambartsumian} are
+If the eigenvalues of \eqref{Ambartsumian} are
+$\lambda_n=n^2,\;n \ge 0,$ then $q(x)=0$ a.e. on $(0,\pi)$.
+}
+
+\
+
+During the fifteen years nobody has taken notice of that paper. However in 1944 that work was found by Swedish mathematicians who have obtained many interesting results related to the ''inverse Sturm-Liouville problem`` and thus that paper became the foundation of an entire discipline.
+}
 
 
 
- \begin{columns}
+
+\column{0.5}
+
+
+
+
+
+%\end{columns}
+
+
+
+ %\begin{columns}
 
  % FIRST column
-\column{0.5}% Width set relative to text width
+%\column{0.5}% Width set relative to text width
 
 
-\block{jkhkjh}{
-Let the function $\Phi(x,\lambda)$ be a solution of \eqref{initeq} under conditions
-\[
-\Phi(0,\lambda)=1, \quad\Phi(x,\lambda)=O(e^{i\rho x}),\quad x\to\infty. %\quad \rho\in\Omega.
-\]
-where $\Im\rho\geq0$, $\rho\neq0$.
 
-WHAT IS ${\cal L}$??????
-%$\Phi(0,\lambda)=1$, $\Phi(x,\lambda)=O(\exp(i\rho x))$, $x\to\infty$, $\rho\in\Omega$. 
-\innerblock{}{
-Function $\Phi(x,\lambda)$ is called the \textit{Weyl solution} for ${\cal L}$.
-}
-\innerblock{}{
-The function $M(\lambda):=\Phi'(0,\lambda)$ is called the {\it Weyl function} for ${\cal L}$.
-}
-
-
-\innerblock[titleleft]{Inverse Problem}{
-Recover $q(x)$ by the given Weyl function $M(\lambda)$.
-}
-}
 
 
  
@@ -223,10 +166,12 @@ Recover $q(x)$ by the given Weyl function $M(\lambda)$.
 %\end{tikzfigure}
 %}
 
-\block{hgjhgjhgjhg}{
-An interesting kind of generalization of Bessel equation is ...
-It can be easily obtained by taking a substitution...
-}
+%\block{hgjhgjhgjhg}{
+%An interesting kind of generalization of Bessel equation is ...
+%It can be easily obtained by taking a substitution...
+%}
+
+
 \block{Object}{
 Consider the differential equation
 \begin{equation}
@@ -254,7 +199,35 @@ WHAT IS matching conditions!
 WHAT IS WEYL FUNCTION!
 }
 
-\column{0.5}
+\block{The Inverse Problem}{
+Let the function $\Phi(x,\lambda)$ be a solution of \eqref{initeq} under conditions
+\[
+\Phi(0,\lambda)=1, \quad\Phi(x,\lambda)=O(e^{i\rho x}),\quad x\to\infty. %\quad \rho\in\Omega.
+\]
+where $\Im\rho\geq0$, $\rho\neq0$.
+WHAT IS ${\cal L}$??????
+%$\Phi(0,\lambda)=1$, $\Phi(x,\lambda)=O(\exp(i\rho x))$, $x\to\infty$, $\rho\in\Omega$. 
+\innerblock{}{
+Function $\Phi(x,\lambda)$ is called the \textit{Weyl solution} for ${\cal L}$.
+}
+\innerblock{}{
+The function $M(\lambda):=\Phi'(0,\lambda)$ is called the {\it Weyl function} for ${\cal L}$.
+}
+
+
+\innerblock[titleleft]{Inverse Problem}{
+Recover $q(x)$ by the given Weyl function $M(\lambda)$.
+}
+
+\innerblock[titleleft]{Uniqueness Theorem}{
+%If $M(\lambda)=\widetilde M(\lambda)$, then $q(x)=\tilde q(x)$ almost everywhere for $x>0$. Thus, the Weyl function uniquely determines the boundary value problem $\cal L$.
+The Weyl function uniquely determines the boundary value problem $\cal L$.
+}
+
+}
+
+
+%\column{0.5}
  %Second column with first block's top edge aligned with with previous column's top.
 \block{What is Matching Conditions?}{Let $\lambda=\rho^2$ and $\mathrm{Im}\,\rho\geq0$. Consider the functions
 \[
@@ -270,11 +243,12 @@ Here and below $z^{\mu}=\exp(\mu(\mbox{ln}|z|+i\arg z))$, $\arg z \in (-\pi, \pi
 \[
 s_j(x,\lambda)=C_j(x,\lambda)+\int^x_{a} g(x,t,\lambda)q(t)s_j(t,\lambda)\,dt,
 \]
-where $g(x,t,\lambda)=C_1(t,\lambda)C_2(x,\lambda)-C_1(x,\lambda)C_2(t,\lambda)$. For each fixed $x$ the functions $s_j(x,\lambda)$ are entire in $\lambda$ of order 1/2 and form a fundamental system of solutions of \eqref{initeq}. Moreover 
-\begin{equation}
-\det[s_j^{(m-1)}(x,\lambda)]_{j,m=\overline{1,2}}\equiv 1. 
-\label{detsj}        
-\end{equation} 
+where $g(x,t,\lambda)=C_1(t,\lambda)C_2(x,\lambda)-C_1(x,\lambda)C_2(t,\lambda)$. For each fixed $x$ the functions $s_j(x,\lambda)$ are entire in $\lambda$ of order 1/2 and form a fundamental system of solutions of \eqref{initeq}. 
+%Moreover 
+%\begin{equation}
+%\det[s_j^{(m-1)}(x,\lambda)]_{j,m=\overline{1,2}}\equiv 1. 
+%\label{detsj}        
+%\end{equation} 
 
 Let $A=[a_{jk}]_{j,k=1,2}$, $\det A\ne 0$ be a given matrix with complex numbers $a_{jk}$. We introduce the functions  $\{\sigma_j(x,\lambda)\}_{j=1,2}$, $x\in J_{-}\cup J_{+}$, $J_{\pm}=\{\pm (x-a)>0\}$ by the formula
 \begin{equation*}
@@ -285,100 +259,49 @@ s_j(x,\lambda), & x\in J_{-},\\
 \end{array}\right.
 \label{sigmajinsk}
 \end{equation*}
-The fundamental system of solutions $\{\sigma_j(x,\lambda)\}$ is used to match solutions in a neighborhood of the singular point  $x=a$. It follows from \eqref{detsj} that
-\begin{equation}
-\det[\sigma_j^{(m-1)}(x,\lambda)]_{j,m=1,2}\equiv
-\left\{ \begin{array}{ll}
-1,\quad & x\in J_{-}, \\ \det A,\quad & x\in J_{+}.
-\end{array}\right. 
-\label{detsigmaj}                
-\end{equation}
+The fundamental system of solutions $\{\sigma_j(x,\lambda)\}$ is used to match solutions in a neighborhood of the singular point  $x=a$. 
+%It follows from \eqref{detsj} that
+%\begin{equation}
+%\det[\sigma_j^{(m-1)}(x,\lambda)]_{j,m=1,2}\equiv
+%\left\{ \begin{array}{ll}
+%1,\quad & x\in J_{-}, \\ \det A,\quad & x\in J_{+}.
+%\end{array}\right. 
+%\label{detsigmaj}                
+%\end{equation}
 
-We introduce numbers $\xi_{jk}$, $j,k=1,2$ by
-\begin{equation}
-\left[ \begin{array}{ll}
-\xi_{11} & \xi_{12} \\ \xi_{21} & \xi_{22}
-\end{array}\right]= \frac{1}{2\sin\pi\nu}
-\left[ \begin{array}{ll}
--a_{11}e^{2\pi i\nu}+a_{22}e^{-2\pi i\nu} & -i(a_{11}e^{\pi i\nu}-a_{22}e^{-\pi i\nu}) \\
--i(a_{11}e^{\pi i\nu}-a_{22}e^{-\pi i\nu}) & a_{11}-a_{22} 
-\end{array}\right] .    
-\label{ksimatrix}
-\end{equation}       
-The behaviour of the spectrum of the boundary value problem ${\cal L}$ depends on the numbers $\xi_{jk}$. We consider the most difficult special case in which $|\xi_{jj}|>|\xi_{12}|>0$, since in this case the discrete spectrum is unbounded and essential qualitative modifications in the investigation of the direct and inverse problems are arised. 
-To be definite we set $a_{12}=0$ (the other case requires minor modifications).
+%We introduce numbers $\xi_{jk}$, $j,k=1,2$ by
+%\begin{equation}
+%\left[ \begin{array}{ll}
+%\xi_{11} & \xi_{12} \\ \xi_{21} & \xi_{22}
+%\end{array}\right]= \frac{1}{2\sin\pi\nu}
+%\left[ \begin{array}{ll}
+%-a_{11}e^{2\pi i\nu}+a_{22}e^{-2\pi i\nu} & -i(a_{11}e^{\pi i\nu}-a_{22}e^{-\pi i\nu}) \\
+%-i(a_{11}e^{\pi i\nu}-a_{22}e^{-\pi i\nu}) & a_{11}-a_{22} 
+%\end{array}\right] .    
+%\label{ksimatrix}
+%\end{equation}       
+%The behaviour of the spectrum of the boundary value problem ${\cal L}$ depends on the numbers $\xi_{jk}$. 
+We consider the most difficult special case in which 
+%$|\xi_{jj}|>|\xi_{12}|>0$, since in this case 
+the discrete spectrum is unbounded and essential qualitative modifications in the investigation of the direct and inverse problems are arised. 
+%To be definite we set $a_{12}=0$ (the other case requires minor modifications).
 \begin{tikzfigure}[A figure can be made withoes not work]
 \includegraphics[scale=1]{spectra.pdf}
 \end{tikzfigure}
 }
 
-\block{Using Method of Spectral Mappings}{
-\innerblock[titleleft]{Uniqueness Theorem}{
-%If $M(\lambda)=\widetilde M(\lambda)$, then $q(x)=\tilde q(x)$ almost everywhere for $x>0$. Thus, the Weyl function uniquely determines the boundary value problem $\cal L$.
-The Weyl function uniquely determines the boundary value problem $\cal L$.
-}
-}
+%\block{Using Method of Spectral Mappings}{
+%\innerblock[titleleft]{Uniqueness Theorem}{
+%%If $M(\lambda)=\widetilde M(\lambda)$, then $q(x)=\tilde q(x)$ almost everywhere for $x>0$. Thus, the Weyl function uniquely determines the boundary value problem $\cal L$.
+%The Weyl function uniquely determines the boundary value problem $\cal L$.
+%}
+%}
 
 
 
  \end{columns}
 
 \end{document}
-
- \begin{columns}
-
- % FIRST column
-\column{0.6}% Width set relative to text width
-
-\block{Large Column}{Text\\Text\\Text Text Text}
-\note{Note with default behavior}
-\note[targetoffsetx=12cm, targetoffsety=-1cm, angle=20, rotate=25]
-{Note \\ offset and rotated}
-
- % First column - second block
-\block{Block titles with enough text will automatically obey spacing requirements }
-{Text\\Text}
-
- % First column - third block
-\block{Sample Block 4}{T\\E\\S\\T}
-
- % SECOND column
-\column{0.4}
- %Second column with first block's top edge aligned with with previous column's top.
-
- % Second column - first block
-\block[titleleft]{Smaller Column}{Test}
-
- % Second column - second block
-\block[titlewidthscale=0.6, bodywidthscale=0.8]
-{Variable width title}{Block with smaller width.}
-
- % Second column - third block
-\block{}{Block with no title}
-
- % Second column - A collection of blocks in subcolumn environment.
-\begin{subcolumns}
-    \subcolumn{0.27} \block{1}{First block.} \block{2}{Second block}
-    \subcolumn{0.4} \block{Sub-columns}{Sample subblocks\\Second subcolumn}
-    \subcolumn{0.33} \block{4}{Fourth} \block{}{Final Subcolumn block}
-\end{subcolumns}
-
- % Bottomblock
-\block{Final Block in column}{
-    Sample block.
-}
-\end{columns}
-
-
-
-
-%\block[titleleft, titleoffsetx=2em, titleoffsety=1em, bodyoffsetx=2em,%
-% bodyoffsety=-2cm, roundedcorners=10, linewidth=0mm, titlewidthscale=0.7,%
-% bodywidthscale=0.9, bodyverticalshift=2cm, titleright]
-%{Block outside of Columns}{Along with several options enabled}
-
-\end{document}
-
 
 
 \endinput
