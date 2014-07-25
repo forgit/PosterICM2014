@@ -1,11 +1,16 @@
-\documentclass[a0paper,25pt]{tikzposter} %Options for format can be included here
+\documentclass[blockverticalspace=35mm,colspace=35mm,25pt]{tikzposter} %Options for format can be included here
 \usepackage{pgfplots}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 %\usepackage{amsthm}
+\usepackage{setspace}
+\onehalfspacing
 
 \geometry{paperwidth=90cm,paperheight=160cm}
+
+\linespread{1.05}
+
 
 \usetikzlibrary{arrows,positioning,arrows.meta} 
 \tikzset{
@@ -50,24 +55,32 @@ with Bessel-type singularity inside an interval
  %Choose Layout
 %\usetheme{Default}
 
-%\usetheme{Board}
+\usetheme{Board}
+%\usetheme{Rays}
 %\usecolorstyle{Russia}
 \tikzposterlatexaffectionproofoff
 
 \begin{document}
 
+
  % Title block with title, author, logo, etc.
+%\maketitle[titletoblockverticalspace=7cm]
 \maketitle
 
 \begin{columns}
 
 \column{0.5}
 
-\block{What is Inverse Problems?}{
-\innerblock{}{Inverse problems are concerned with determining causes for a desired or an observed effect.}
+\block{\huge What is Inverse Problem?}{
+%\innerblock{}
+\Large
+Inverse problems are concerned with determining causes for a desired or an observed effect.
 
-\begin{tikzfigure}[]
-\begin{tikzpicture}[node distance=1cm, auto,]
+
+\
+
+\begin{tikzfigure}[A relation between direct and inverse problems]
+\begin{tikzpicture}[node distance=1cm, auto]
  \node (dummy) {};
  \node[punkt, left = of dummy] (cause) {\textbf{Cause}\\(Data, Observation, ...)};
  \node[punkt,right=of dummy]  (effect) {\textbf{Effect}\\(Parameter, Potential, ...)};
@@ -75,6 +88,8 @@ with Bessel-type singularity inside an interval
  \draw (effect.south) edge[pil,->, bend left=45] node[auto] {Inverse Problem} (cause.south);
 \end{tikzpicture}
 \end{tikzfigure}
+
+\
 
 
 %\innerblock{What is Inverse Problems?}{
@@ -87,7 +102,8 @@ The situation in which the parameters or sources are directly accessible by meas
 }
 
 
-\block{Neptune}{
+\block{\huge Neptune}{
+\Large
 The discovery of the planet Neptune is a famous example of an inverse problem. At the beginning of the 19th century, the most distant discovered planet was Uranus. When astronomers applied Newton's theory of universal gravitation to the movement of Uranus, the calculations did not match the observed orbit and movement. 
 
 
@@ -103,14 +119,15 @@ In 1844 a French mathematician Urbain Le Verrier began to labor away at this cal
 
 
 
-\block{First Result}{
+\block{\huge First Result}{
+\Large
 The inverse spectral problems theory was discovered and introduced by Soviet-Armenian astrophysicist Victor Ambartsumian.
 
 Just after his graduation from the University of Leningrad he was interested in what degree do the eigenvalues of an ordinary differential operator determine the functions and parameters entering into that operator? Ambartsumian published in 1929 in Zeitschrift f\"ur Physik a paper which contained the statement of the general problem and the proof of the theorem that among all strings the homogeneous string is uniquely defined by the set of its oscillation-frequencies.
 
 \
 
-\innerblock[titleleft]{Theorem}{
+\innerblock[titleleft]{\LARGE Theorem}{
 Consider the boundary value problem
 \begin{equation}
 -y''+q(x)y=\lambda y, \quad y'(0)=y'(\pi)=0.
@@ -130,6 +147,28 @@ During the fifteen years nobody has taken notice of that paper. However in 1944 
 }
 
 
+
+\block{\refname}{
+%[1] Fedoseev A. bla-bla-bla in mechanics. Mega J. 2013
+%
+%[2] Fedoseev A. bla-bla-bla in mechanics. Mega J. 2013
+%
+%[3] Fedoseev A. bla-bla-bla in mechanics. Mega J. 2013
+
+{\def\section*#1{}
+\begin{thebibliography}{100}
+\bibitem{fedoseev-izvsgu-13}
+    Fedoseev A.E. Necessary and Sufficient Conditions for the Solvability of the Inverse Problem for Sturm-Liouville Operators with a Nonintegrable Singularity Inside a Finite Interval, Izv. Saratov. Univ. Mat. Mekh. Inform., vol. 13, num. 3, 2013, 59-64 (in Russian).
+\bibitem{fedoseev-cejm-13}
+\textbf{Fedoseev A. An inverse problem for Sturm–Liouville operators on the half-line having Bessel-type singularity in an interior point, Cent. Eur. J. Math., vol. 11, num. 12, 2013, 2203-2214.}
+\bibitem{fedoseev-izvsgu-12}
+    Fedoseev A.E. Inverse problem for Sturm-Liouville operator on the half-line  having nonintegrable singularity, in an interior point, Izv. Saratov. Univ. Mat. Mekh. Inform., vol. 12, num. 4, 2012, 49-55 (in Russian).        
+\bibitem{fedoseev-tamkang-11}
+\textbf{Fedoseev A. Inverse problems for differential equations on the half-line having a singularity in an interior point, Tamkang J. Math., vol. 42, num. 3, 2011, 343-354.}
+    
+\end{thebibliography}
+}
+}
 
 
 \column{0.5}
@@ -174,20 +213,28 @@ During the fifteen years nobody has taken notice of that paper. However in 1944 
 %}
 
 
-\block{Object}{
+\block{\huge The Problem}{
+\Large
 Consider the differential equation
 \begin{equation}
 \ell y = -y''+\Big(\frac{\nu_0}{(x-a)^2}+q(x)\Big)y=\lambda y,\quad x>0,
 \label{initeq}
 \end{equation}
 on the half-line with a Bessel-type singularity at an interior point $a>0$. 
-\begin{tikzfigure}[Some caption]
-\begin{tikzpicture}[scale=1]
+
+\
+
+\begin{tikzfigure}[$a\in(0,\infty)$]
+\begin{tikzpicture}[scale=2]
 \draw [->, color=gray,thick] (0,0) node[below] {$0$}-- (5,0) node[below] {$x$};
 \node[shape=circle,fill=red,scale=0.3] at (2,0) {};
 \node[below,color=gray] at (2,-0.1) {$a$};
 \end{tikzpicture}
 \end{tikzfigure}
+
+\
+
+
 Here $q(x)$ is a complex-valued function and $\nu_0$ is a complex number. Let $\nu_0=\nu^2-1/4$ and to be definite, we assume that  $Re\,\nu>0,$ $\nu\neq 1,2,\ldots$ (the other cases require minor modifications). We also assume that $q(x)|x-~a|^{\min(0,1-2Re\,\nu)} \in L(0,T)$ for some $T>a$ and $q(x)\in L(T,\infty)$. We denote the class of such functions $q(x)$ by $W$.
 
 CHANGE THIS!!!!!!!!!!
@@ -201,37 +248,14 @@ WHAT IS matching conditions!
 WHAT IS WEYL FUNCTION!
 }
 
-\block{The Inverse Problem}{
-Let the function $\Phi(x,\lambda)$ be a solution of \eqref{initeq} under conditions
-\[
-\Phi(0,\lambda)=1, \quad\Phi(x,\lambda)=O(e^{i\rho x}),\quad x\to\infty. %\quad \rho\in\Omega.
-\]
-where $\Im\rho\geq0$, $\rho\neq0$.
-WHAT IS ${\cal L}$??????
-%$\Phi(0,\lambda)=1$, $\Phi(x,\lambda)=O(\exp(i\rho x))$, $x\to\infty$, $\rho\in\Omega$. 
-\innerblock{}{
-Function $\Phi(x,\lambda)$ is called the \textit{Weyl solution} for ${\cal L}$.
-}
-\innerblock{}{
-The function $M(\lambda):=\Phi'(0,\lambda)$ is called the {\it Weyl function} for ${\cal L}$.
-}
 
-
-\innerblock[titleleft]{Inverse Problem}{
-Recover $q(x)$ by the given Weyl function $M(\lambda)$.
-}
-
-\innerblock[titleleft]{Uniqueness Theorem}{
-%If $M(\lambda)=\widetilde M(\lambda)$, then $q(x)=\tilde q(x)$ almost everywhere for $x>0$. Thus, the Weyl function uniquely determines the boundary value problem $\cal L$.
-The Weyl function uniquely determines the boundary value problem $\cal L$.
-}
-
-}
 
 
 %\column{0.5}
  %Second column with first block's top edge aligned with with previous column's top.
-\block{What is Matching Conditions?}{Let $\lambda=\rho^2$ and $\mathrm{Im}\,\rho\geq0$. Consider the functions
+\block{\huge Matching Conditions}{
+\Large
+Let $\lambda=\rho^2$ and $\mathrm{Im}\,\rho\geq0$. Consider the functions
 \[
 C_j(x,\lambda)=(x-a)^{\mu_j} \sum^\infty_{k=0} c_{jk}(\rho (x-a))^{2k} ,\; j=1,2,
 \]
@@ -283,12 +307,12 @@ The fundamental system of solutions $\{\sigma_j(x,\lambda)\}$ is used to match s
 %\label{ksimatrix}
 %\end{equation}       
 %The behaviour of the spectrum of the boundary value problem ${\cal L}$ depends on the numbers $\xi_{jk}$. 
-We consider the most difficult special case in which 
+We consider the most difficult special case when
 %$|\xi_{jj}|>|\xi_{12}|>0$, since in this case 
 the discrete spectrum is unbounded and essential qualitative modifications in the investigation of the direct and inverse problems are arised. 
 %To be definite we set $a_{12}=0$ (the other case requires minor modifications).
-\begin{tikzfigure}[A figure can be made withoes not work]
-\includegraphics[scale=1]{spectra.pdf}
+\begin{tikzfigure}[The spectrum of boundary value problem {\cal L}.]
+\includegraphics[scale=3]{spectra.pdf}
 \end{tikzfigure}
 }
 
@@ -299,9 +323,42 @@ the discrete spectrum is unbounded and essential qualitative modifications in th
 %}
 %}
 
+\block{The Inverse Problem}{
+Let the function $\Phi(x,\lambda)$ be a solution of \eqref{initeq} under conditions
+\[
+\Phi(0,\lambda)=1, \quad\Phi(x,\lambda)=O(e^{i\rho x}),\quad x\to\infty. %\quad \rho\in\Omega.
+\]
+where $\Im\rho\geq0$, $\rho\neq0$.
+WHAT IS ${\cal L}$??????
+%$\Phi(0,\lambda)=1$, $\Phi(x,\lambda)=O(\exp(i\rho x))$, $x\to\infty$, $\rho\in\Omega$. 
+\innerblock{}{
+Function $\Phi(x,\lambda)$ is called the \textit{Weyl solution} for ${\cal L}$.
+}
+\innerblock{}{
+The function $M(\lambda):=\Phi'(0,\lambda)$ is called the {\it Weyl function} for ${\cal L}$.
+}
 
 
+\innerblock[titleleft]{Inverse Problem}{
+Recover $q(x)$ by the given Weyl function $M(\lambda)$.
+}
+
+\innerblock[titleleft]{Uniqueness Theorem}{
+%If $M(\lambda)=\widetilde M(\lambda)$, then $q(x)=\tilde q(x)$ almost everywhere for $x>0$. Thus, the Weyl function uniquely determines the boundary value problem $\cal L$.
+The Weyl function uniquely determines the boundary value problem $\cal L$.
+}
+
+}
+
+
+
+
+\block{Acknowledgements}{
+This work was supported by the Ministry of Education and Science of the
+Russian Federation (Grant 1.1436.2014K) and NANUM 2014 Travel Grant.
+}
  \end{columns}
+
 
 \end{document}
 

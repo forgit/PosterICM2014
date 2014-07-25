@@ -816,7 +816,7 @@ bgcolor=notebgcolor, fgcolor=notefgcolor, framecolor=notebgcolor, #1}
     \ifx\rememberparameter\@empty
     \else %nothing
     \\[10pt]
-    {\small Fig.~\thefigurecounter: \rememberparameter}
+    {\large Fig.~\thefigurecounter: \rememberparameter}
     \fi
   \end{center}
 }
