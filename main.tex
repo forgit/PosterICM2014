@@ -215,11 +215,18 @@ During the fifteen years nobody has taken notice of that paper. However in 1944 
 
 \block{\huge The Problem}{
 \Large
-Consider the differential equation
+Consider the boundary value problem  ${\cal L=L}(q)$
 \begin{equation}
-\ell y = -y''+\Big(\frac{\nu_0}{(x-a)^2}+q(x)\Big)y=\lambda y,\quad x>0,
-\label{initeq}
+\begin{cases}
+-y''+\Big(\frac{\nu_0}{(x-a)^2}+q(x)\Big)y=\lambda y,\quad x>0,\\
+y(0)=0
+\end{cases}
 \end{equation}
+%Consider the differential equation
+%\begin{equation}
+%\ell y = -y''+\Big(\frac{\nu_0}{(x-a)^2}+q(x)\Big)y=\lambda y,\quad x>0,
+%\label{initeq}
+%\end{equation}
 on the half-line with a Bessel-type singularity at an interior point $a>0$. 
 
 \
@@ -235,7 +242,9 @@ on the half-line with a Bessel-type singularity at an interior point $a>0$.
 \
 
 
-Here $q(x)$ is a complex-valued function and $\nu_0$ is a complex number. Let $\nu_0=\nu^2-1/4$ and to be definite, we assume that  $Re\,\nu>0,$ $\nu\neq 1,2,\ldots$ (the other cases require minor modifications). We also assume that $q(x)|x-~a|^{\min(0,1-2Re\,\nu)} \in L(0,T)$ for some $T>a$ and $q(x)\in L(T,\infty)$. We denote the class of such functions $q(x)$ by $W$.
+Here $q(x)$ is a complex-valued function and $\nu_0$ is a complex number. Let $\nu_0=\nu^2-1/4$ and to be definite, we assume that  $Re\,\nu>0,$ $\nu\neq 1,2,\ldots$ 
+%(the other cases require minor modifications)
+. We also assume that $q(x)|x-~a|^{\min(0,1-2Re\,\nu)} \in L(0,T)$ for some $T>a$ and $q(x)\in L(T,\infty)$. We denote the class of such functions $q(x)$ by $W$.
 
 CHANGE THIS!!!!!!!!!!
 
