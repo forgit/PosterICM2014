@@ -1,4 +1,4 @@
-\documentclass[blockverticalspace=25mm,colspace=25mm,25pt]{tikzposter} %Options for format can be included here
+\documentclass[blockverticalspace=20mm,colspace=20mm,25pt]{tikzposter} %Options for format can be included here
 \usepackage{pgfplots}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -109,7 +109,7 @@ The discovery of the planet Neptune is a famous example of an inverse problem. A
 
 
 \begin{tikzfigure}[Neptune]
-\includegraphics[scale=2]{Neptune.pdf}
+\includegraphics[scale=1.5]{Neptune.pdf}
 \end{tikzfigure}
 
 
@@ -157,6 +157,12 @@ During the fifteen years nobody has taken notice of that paper. However in 1944 
 
 {\def\section*#1{}
 \begin{thebibliography}{100}
+\bibitem{lapwood81} 	
+	Lapwood F. R., Usami T., Free Oscillations of the Earth, Cambridge University Press, Cambridge, 1981
+\bibitem{const98} 		
+	Constantin A., On the inverse spectral problem for the Camassa-Holm equation, J. Funct. Anal., 1998, 155, 352-363	
+\bibitem{yurko-freiling-99} 
+	Freiling G., Yurko V. A.,  Reconstructing parameters of a medium from incomplete spectral information, Results Math., 1999, 35, 228-249
 \bibitem{fedoseev-izvsgu-13}
     Fedoseev A.E. Necessary and Sufficient Conditions for the Solvability of the Inverse Problem for Sturm-Liouville Operators with a Nonintegrable Singularity Inside a Finite Interval, Izv. Saratov. Univ. Mat. Mekh. Inform., vol. 13, num. 3, 2013, 59-64 (in Russian).
 \bibitem{fedoseev-cejm-13}
@@ -251,6 +257,16 @@ We also assume that $q(x)|x-~a|^{\min(0,1-2Re\,\nu)} \in L(0,T)$ for some $T>a$ 
 %The paper deals with the boundary value problem  ${\cal L=L}(q)$ for differential equation \eqref{initeq} with the Dirichlet boundary condition $y(0)=0$ and an additional \textit{matching conditions} near the singular point $x=a$. 
 %We consider in some sense arbitrary matching conditions with a transition matrix $A=[a_{jk}]_{j,k=1,2},$ that connects solutions of \eqref{initeq} in a neighborhood of the singular point. 
 
+Inverse problems for differential equations with singularities inside an 
+interval are important in mathematics and its applications. A wide class of differential
+equations with turning points can be reduced to equations with singularities. For example, inverse
+problems for such equations occur in electronic engineering in designing heterogeneous transmission
+channels with given characteristics \cite{yurko-freiling-99}. Boundary value problems with a discontinuity at an interior
+point also arise in geophysical models of the Earth's crust \cite{lapwood81}. Inverse problems for equations
+with singularities and turning points are used in investigations of the discontinuous solutions of
+some integrable nonlinear equations of mathematical physics \cite{const98}. 
+%Note that in different problems of natural sciences, various matching conditions for solutions with the corresponding transition matrices $A$ are used.
+
 }
 
 
@@ -271,7 +287,9 @@ where $c_{10}c_{20}=(2\nu)^{-1}$,
 \mu_j=(-1)^j\nu+1/2,\, c_{jk}=(-1)^k c_{j0}
 \,\Big( \prod^k_{s=1} ((2s+\mu_j)(2s+\mu_j-1)-\nu_0)\Big)^{-1}.
 \]
-Here and below $z^{\mu}=\exp(\mu(\mbox{ln}|z|+i\arg z))$, $\arg z \in (-\pi, \pi]$. If $x>a$ or $x<a$ then the functions
+Here 
+%and below 
+$z^{\mu}=\exp(\mu(\mbox{ln}|z|+i\arg z))$, $\arg z \in (-\pi, \pi]$. If $x>a$ or $x<a$ then the functions
  $C_j(x,\lambda)$ are solutions of \eqref{initeq} with $q(x)\equiv 0$. Let the functions $s_j(x,\lambda)$, $j=1,2$ be solutions of the following integral equations for $x>a$ and $x<a$: 
 \[
 s_j(x,\lambda)=C_j(x,\lambda)+\int^x_{a} g(x,t,\lambda)q(t)s_j(t,\lambda)\,dt,
@@ -286,11 +304,11 @@ where $g(x,t,\lambda)=C_1(t,\lambda)C_2(x,\lambda)-C_1(x,\lambda)C_2(t,\lambda)$
 %Let $A=[a_{jk}]_{j,k=1,2}$, $\det A\ne 0$ be a given matrix with complex numbers $a_{jk}$. We introduce the functions  $\{\sigma_j(x,\lambda)\}_{j=1,2}$, $x\in J_{-}\cup J_{+}$, $J_{\pm}=\{\pm (x-a)>0\}$ by the formula
 Let $A=[a_{jk}]_{j,k=1,2}$, $\det A\ne 0$ be a given matrix with complex numbers $a_{jk}$. We introduce the functions  $\{\sigma_j(x,\lambda)\}_{j=1,2}$, $x\neq a$ by the formula
 \begin{equation*}
-\sigma_j(x,\lambda)=\left\{
-\begin{array}{ll}
+\sigma_j(x,\lambda)=
+\begin{cases}
 s_j(x,\lambda), & x<a,\\
 \sum\limits_{k=1}^{2}a_{kj}s_k(x,\lambda),&  x>a.
-\end{array}\right.
+\end{cases}
 \label{sigmajinsk}
 \end{equation*}
 The fundamental system of solutions $\{\sigma_j(x,\lambda)\}$ is used to match solutions in a neighborhood of the singular point  $x=a$. 
@@ -320,7 +338,7 @@ We consider the most difficult special case when
 the discrete spectrum is unbounded and essential qualitative modifications in the investigation of the direct and inverse problems are arised. 
 %To be definite we set $a_{12}=0$ (the other case requires minor modifications).
 \begin{tikzfigure}[The spectrum of boundary value problem {\cal L}.]
-\includegraphics[scale=3]{spectra.pdf}
+\includegraphics[scale=2]{spectra.pdf}
 \end{tikzfigure}
 }
 
@@ -331,7 +349,8 @@ the discrete spectrum is unbounded and essential qualitative modifications in th
 %}
 %}
 
-\block{The Inverse Problem}{
+\block{\huge The Inverse Problem}{
+\Large
 Let the function $\Phi(x,\lambda)$ be a solution of \eqref{initeq} under conditions
 \[
 \Phi(0,\lambda)=1, \quad\Phi(x,\lambda)=O(e^{i\rho x}),\quad x\to\infty. %\quad \rho\in\Omega.
@@ -339,9 +358,10 @@ Let the function $\Phi(x,\lambda)$ be a solution of \eqref{initeq} under conditi
 where $\Im\rho\geq0$, $\rho\neq0$.
 %WHAT IS ${\cal L}$??????
 %$\Phi(0,\lambda)=1$, $\Phi(x,\lambda)=O(\exp(i\rho x))$, $x\to\infty$, $\rho\in\Omega$. 
-\innerblock{}{
+%\innerblock{}
+{
 %Function $\Phi(x,\lambda)$ is called the \textit{Weyl solution} for ${\cal L}$.
-Function $\Phi(x,\lambda)$ is called the \textit{Weyl solution} for the problem \eqref{initeq}.
+%Function $\Phi(x,\lambda)$ is called the \textit{Weyl solution} for the problem \eqref{initeq}.
 }
 \innerblock{}{
 %The function $M(\lambda):=\Phi'(0,\lambda)$ is called the {\it Weyl function} for ${\cal L}$.
