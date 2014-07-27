@@ -1,4 +1,4 @@
-\documentclass[blockverticalspace=35mm,colspace=35mm,25pt]{tikzposter} %Options for format can be included here
+\documentclass[blockverticalspace=25mm,colspace=25mm,25pt]{tikzposter} %Options for format can be included here
 \usepackage{pgfplots}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -77,7 +77,7 @@ with Bessel-type singularity inside an interval
 Inverse problems are concerned with determining causes for a desired or an observed effect.
 
 
-\
+
 
 \begin{tikzfigure}[A relation between direct and inverse problems]
 \begin{tikzpicture}[node distance=1cm, auto]
@@ -89,7 +89,7 @@ Inverse problems are concerned with determining causes for a desired or an obser
 \end{tikzpicture}
 \end{tikzfigure}
 
-\
+
 
 
 %\innerblock{What is Inverse Problems?}{
@@ -125,7 +125,7 @@ The inverse spectral problems theory was discovered and introduced by Soviet-Arm
 
 Just after his graduation from the University of Leningrad he was interested in what degree do the eigenvalues of an ordinary differential operator determine the functions and parameters entering into that operator? Ambartsumian published in 1929 in Zeitschrift f\"ur Physik a paper which contained the statement of the general problem and the proof of the theorem that among all strings the homogeneous string is uniquely defined by the set of its oscillation-frequencies.
 
-\
+
 
 \innerblock[titleleft]{\LARGE Theorem}{
 Consider the boundary value problem
@@ -141,7 +141,7 @@ If the eigenvalues of \eqref{Ambartsumian} are
 $\lambda_n=n^2,\;n \ge 0,$ then $q(x)=0$ a.e. on $(0,\pi)$.
 }
 
-\
+
 
 During the fifteen years nobody has taken notice of that paper. However in 1944 that work was found by Swedish mathematicians who have obtained many interesting results related to the ''inverse Sturm-Liouville problem`` and thus that paper became the foundation of an entire discipline.
 }
@@ -221,15 +221,16 @@ Consider the boundary value problem  ${\cal L=L}(q)$
 -y''+\Big(\frac{\nu_0}{(x-a)^2}+q(x)\Big)y=\lambda y,\quad x>0,\\
 y(0)=0
 \end{cases}
+\label{initeq}
 \end{equation}
 %Consider the differential equation
 %\begin{equation}
 %\ell y = -y''+\Big(\frac{\nu_0}{(x-a)^2}+q(x)\Big)y=\lambda y,\quad x>0,
 %\label{initeq}
 %\end{equation}
-on the half-line with a Bessel-type singularity at an interior point $a>0$. 
+on the half-line with a Bessel-type singularity at an interior point $a>0$ and an additional \textit{matching conditions} near the singular point $x=a$ (see below). 
 
-\
+
 
 \begin{tikzfigure}[$a\in(0,\infty)$]
 \begin{tikzpicture}[scale=2]
@@ -239,22 +240,17 @@ on the half-line with a Bessel-type singularity at an interior point $a>0$.
 \end{tikzpicture}
 \end{tikzfigure}
 
-\
+
 
 
 Here $q(x)$ is a complex-valued function and $\nu_0$ is a complex number. Let $\nu_0=\nu^2-1/4$ and to be definite, we assume that  $Re\,\nu>0,$ $\nu\neq 1,2,\ldots$ 
-%(the other cases require minor modifications)
-. We also assume that $q(x)|x-~a|^{\min(0,1-2Re\,\nu)} \in L(0,T)$ for some $T>a$ and $q(x)\in L(T,\infty)$. We denote the class of such functions $q(x)$ by $W$.
+%(the other cases require minor modifications). 
+We also assume that $q(x)|x-~a|^{\min(0,1-2Re\,\nu)} \in L(0,T)$ for some $T>a$ and $q(x)\in L(T,\infty)$. 
+%We denote the class of such functions $q(x)$ by $W$.
 
-CHANGE THIS!!!!!!!!!!
+%The paper deals with the boundary value problem  ${\cal L=L}(q)$ for differential equation \eqref{initeq} with the Dirichlet boundary condition $y(0)=0$ and an additional \textit{matching conditions} near the singular point $x=a$. 
+%We consider in some sense arbitrary matching conditions with a transition matrix $A=[a_{jk}]_{j,k=1,2},$ that connects solutions of \eqref{initeq} in a neighborhood of the singular point. 
 
-The paper deals with the boundary value problem  ${\cal L=L}(q)$ for differential equation \eqref{initeq} with the Dirichlet boundary condition $y(0)=0$ and an additional \textit{matching conditions} near the singular point $x=a$. We consider in some sense arbitrary matching conditions with a transition matrix $A=[a_{jk}]_{j,k=1,2},$ that connects solutions of \eqref{initeq} in a neighbourhood of the singular point (for details, see Section 2). 
-
-CHANGE THIS!!!!!!!!!!
-
-WHAT IS matching conditions!
-
-WHAT IS WEYL FUNCTION!
 }
 
 
@@ -264,6 +260,8 @@ WHAT IS WEYL FUNCTION!
  %Second column with first block's top edge aligned with with previous column's top.
 \block{\huge Matching Conditions}{
 \Large
+We consider in some sense arbitrary matching conditions with a transition matrix $A=[a_{jk}]_{j,k=1,2},$ that connects solutions of \eqref{initeq} in a neighborhood of the singular point. 
+
 Let $\lambda=\rho^2$ and $\mathrm{Im}\,\rho\geq0$. Consider the functions
 \[
 C_j(x,\lambda)=(x-a)^{\mu_j} \sum^\infty_{k=0} c_{jk}(\rho (x-a))^{2k} ,\; j=1,2,
@@ -285,12 +283,13 @@ where $g(x,t,\lambda)=C_1(t,\lambda)C_2(x,\lambda)-C_1(x,\lambda)C_2(t,\lambda)$
 %\label{detsj}        
 %\end{equation} 
 
-Let $A=[a_{jk}]_{j,k=1,2}$, $\det A\ne 0$ be a given matrix with complex numbers $a_{jk}$. We introduce the functions  $\{\sigma_j(x,\lambda)\}_{j=1,2}$, $x\in J_{-}\cup J_{+}$, $J_{\pm}=\{\pm (x-a)>0\}$ by the formula
+%Let $A=[a_{jk}]_{j,k=1,2}$, $\det A\ne 0$ be a given matrix with complex numbers $a_{jk}$. We introduce the functions  $\{\sigma_j(x,\lambda)\}_{j=1,2}$, $x\in J_{-}\cup J_{+}$, $J_{\pm}=\{\pm (x-a)>0\}$ by the formula
+Let $A=[a_{jk}]_{j,k=1,2}$, $\det A\ne 0$ be a given matrix with complex numbers $a_{jk}$. We introduce the functions  $\{\sigma_j(x,\lambda)\}_{j=1,2}$, $x\neq a$ by the formula
 \begin{equation*}
 \sigma_j(x,\lambda)=\left\{
 \begin{array}{ll}
-s_j(x,\lambda), & x\in J_{-},\\
-\sum\limits_{k=1}^{2}a_{kj}s_k(x,\lambda),&  x\in J_{+}.
+s_j(x,\lambda), & x<a,\\
+\sum\limits_{k=1}^{2}a_{kj}s_k(x,\lambda),&  x>a.
 \end{array}\right.
 \label{sigmajinsk}
 \end{equation*}
@@ -338,13 +337,15 @@ Let the function $\Phi(x,\lambda)$ be a solution of \eqref{initeq} under conditi
 \Phi(0,\lambda)=1, \quad\Phi(x,\lambda)=O(e^{i\rho x}),\quad x\to\infty. %\quad \rho\in\Omega.
 \]
 where $\Im\rho\geq0$, $\rho\neq0$.
-WHAT IS ${\cal L}$??????
+%WHAT IS ${\cal L}$??????
 %$\Phi(0,\lambda)=1$, $\Phi(x,\lambda)=O(\exp(i\rho x))$, $x\to\infty$, $\rho\in\Omega$. 
 \innerblock{}{
-Function $\Phi(x,\lambda)$ is called the \textit{Weyl solution} for ${\cal L}$.
+%Function $\Phi(x,\lambda)$ is called the \textit{Weyl solution} for ${\cal L}$.
+Function $\Phi(x,\lambda)$ is called the \textit{Weyl solution} for the problem \eqref{initeq}.
 }
 \innerblock{}{
-The function $M(\lambda):=\Phi'(0,\lambda)$ is called the {\it Weyl function} for ${\cal L}$.
+%The function $M(\lambda):=\Phi'(0,\lambda)$ is called the {\it Weyl function} for ${\cal L}$.
+The function $M(\lambda):=\Phi'(0,\lambda)$ is called the {\it Weyl function} for the problem \eqref{initeq}.
 }
 
 
@@ -354,7 +355,8 @@ Recover $q(x)$ by the given Weyl function $M(\lambda)$.
 
 \innerblock[titleleft]{Uniqueness Theorem}{
 %If $M(\lambda)=\widetilde M(\lambda)$, then $q(x)=\tilde q(x)$ almost everywhere for $x>0$. Thus, the Weyl function uniquely determines the boundary value problem $\cal L$.
-The Weyl function uniquely determines the boundary value problem $\cal L$.
+%The Weyl function uniquely determines the boundary value problem $\cal L$.
+The Weyl function uniquely determines the boundary value problem \eqref{initeq}.
 }
 
 }
