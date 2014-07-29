@@ -6,10 +6,12 @@
 %\usepackage{amsthm}
 \usepackage{setspace}
 \onehalfspacing
+\usepackage{graphicx}
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
 
 \geometry{paperwidth=90cm,paperheight=160cm}
 
-\linespread{1.05}
+\linespread{1.07}
 
 
 \usetikzlibrary{arrows,positioning,arrows.meta} 
@@ -44,7 +46,7 @@
  % Title, Author, Institute
 \title{
 \vbox{
-Inverse problems for Sturm-Liouville operators  
+\bf Inverse problems for Sturm-Liouville operators  
 with Bessel-type singularity inside an interval
 }
 }
@@ -71,7 +73,7 @@ with Bessel-type singularity inside an interval
 
 \column{0.5}
 
-\block{\huge What is Inverse Problem?}{
+\block{\Huge What is Inverse Problem?}{
 %\innerblock{}
 \Large
 Inverse problems are concerned with determining causes for a desired or an observed effect.
@@ -98,7 +100,11 @@ Inverse problems are concerned with determining causes for a desired or an obser
 %Solution of an inverse problem entails determining unknown causes, based on observation of their effects.
 
 
-The situation in which the parameters or sources are directly accessible by measurement is called direct measurement. However, in many cases, the information searched for is not directly measurable. Instead, it is physically connected to other measurable values. We call this situation indirect measurement. Though these measurable values are evidently dependent on the physics of the studied phenomenon, they are also dependent on the measurement instruments employed. The laws of physics that link observable information to the values searched for are generally mathematically complex, using, for example, integral equations or partial derivatives. The solution to a problem that calculates observable effects from unknown values, or a direct problem, is often simpler and more easily mastered than that of an inverse problem, which calculates unknown values from observable effects.
+The situation in which the parameters or sources are directly accessible by measurement is called direct measurement. However, in many cases, the information searched for is not directly measurable. Instead, it is physically connected to other measurable values. We call this situation indirect measurement. 
+%Though these measurable values are evidently dependent on the physics of the studied phenomenon, they are also dependent on the measurement instruments employed. 
+The laws of physics that link observable information to the values searched for are generally mathematically complex, using, for example, integral equations or partial derivatives. The solution to a problem that calculates observable effects from unknown values, or a direct problem, is often simpler 
+%and more easily mastered 
+than that of an inverse problem, which calculates unknown values from observable effects.
 }
 
 
@@ -130,7 +136,7 @@ Just after his graduation from the University of Leningrad he was interested in 
 \innerblock[titleleft]{\LARGE Theorem}{
 Consider the boundary value problem
 \begin{equation}
--y''+q(x)y=\lambda y, \quad y'(0)=y'(\pi)=0.
+\huge -y''+q(x)y=\lambda y, \quad y'(0)=y'(\pi)=0.
 \label{Ambartsumian}
 \end{equation}
 %Clearly, if $q(x)=0$ a.e. on $(0,\pi),$ then the eigenvalues of \eqref{Ambartsumian} have the form $\lambda_n=n^2$,$n\ge 0$. Ambartsumian proved the inverse assertion:
@@ -149,6 +155,7 @@ During the fifteen years nobody has taken notice of that paper. However in 1944 
 
 
 \block{\refname}{
+\small
 %[1] Fedoseev A. bla-bla-bla in mechanics. Mega J. 2013
 %
 %[2] Fedoseev A. bla-bla-bla in mechanics. Mega J. 2013
@@ -176,6 +183,10 @@ During the fifteen years nobody has taken notice of that paper. However in 1944 
 }
 }
 
+\block{Acknowledgements}{
+This work was supported by the Ministry of Education and Science of the
+Russian Federation (Grant 1.1436.2014K) and NANUM 2014 Travel Grant.
+}
 
 \column{0.5}
 
@@ -223,8 +234,9 @@ During the fifteen years nobody has taken notice of that paper. However in 1944 
 \Large
 Consider the boundary value problem  ${\cal L=L}(q)$
 \begin{equation}
+\LARGE
 \begin{cases}
--y''+\Big(\frac{\nu_0}{(x-a)^2}+q(x)\Big)y=\lambda y,\quad x>0,\\
+-y''+\Big(\dfrac{\nu_0}{(x-a)^2}+q(x)\Big)y=\lambda y,\quad x>0,\\
 y(0)=0
 \end{cases}
 \label{initeq}
@@ -238,20 +250,27 @@ on the half-line with a Bessel-type singularity at an interior point $a>0$ and a
 
 
 
-\begin{tikzfigure}[$a\in(0,\infty)$]
-\begin{tikzpicture}[scale=2]
-\draw [->, color=gray,thick] (0,0) node[below] {$0$}-- (5,0) node[below] {$x$};
-\node[shape=circle,fill=red,scale=0.3] at (2,0) {};
-\node[below,color=gray] at (2,-0.1) {$a$};
-\end{tikzpicture}
-\end{tikzfigure}
+
 
 
 
 
 Here $q(x)$ is a complex-valued function and $\nu_0$ is a complex number. Let $\nu_0=\nu^2-1/4$ and to be definite, we assume that  $Re\,\nu>0,$ $\nu\neq 1,2,\ldots$ 
 %(the other cases require minor modifications). 
-We also assume that $q(x)|x-~a|^{\min(0,1-2Re\,\nu)} \in L(0,T)$ for some $T>a$ and $q(x)\in L(T,\infty)$. 
+We also assume that 
+$q(x)|x-~a|^{\min(0,1-2Re\,\nu)} \in L(0,T)$ for some $T>a$ and $q(x)\in L(T,\infty)$. 
+%\[
+%q(x)|x-~a|^{\min(0,1-2Re\,\nu)} \in L(0,T) \text{ for some } T>a \text{ and } q(x)\in L(T,\infty). 
+%\]
+
+\begin{tikzfigure}[$a\in(0,\infty)$]
+\begin{tikzpicture}[scale=3]
+\draw [->, color=gray,thick] (0,0) node[below] {$0$}-- (5,0) node[below] {$x$};
+\node[shape=circle,fill=red,scale=0.3] at (2,0) {};
+\node[below,color=gray] at (2,-0.1) {$a$};
+\end{tikzpicture}
+\end{tikzfigure}
+
 %We denote the class of such functions $q(x)$ by $W$.
 
 %The paper deals with the boundary value problem  ${\cal L=L}(q)$ for differential equation \eqref{initeq} with the Dirichlet boundary condition $y(0)=0$ and an additional \textit{matching conditions} near the singular point $x=a$. 
@@ -352,9 +371,11 @@ the discrete spectrum is unbounded and essential qualitative modifications in th
 \block{\huge The Inverse Problem}{
 \Large
 Let the function $\Phi(x,\lambda)$ be a solution of \eqref{initeq} under conditions
-\[
-\Phi(0,\lambda)=1, \quad\Phi(x,\lambda)=O(e^{i\rho x}),\quad x\to\infty. %\quad \rho\in\Omega.
-\]
+\[\Scale[1.3]{\Phi(0,\lambda)=1, \quad\Phi(x,\lambda)=O(e^{i\rho x}),\quad x\to\infty.}\]
+%\begin{equation*}
+%\Phi(0,\lambda)=1, \quad\Phi(x,\lambda)=O(e^{i\rho x}),\quad x\to\infty.
+%%\quad \rho\in\Omega.
+%\end{equation*}
 where $\Im\rho\geq0$, $\rho\neq0$.
 %WHAT IS ${\cal L}$??????
 %$\Phi(0,\lambda)=1$, $\Phi(x,\lambda)=O(\exp(i\rho x))$, $x\to\infty$, $\rho\in\Omega$. 
@@ -363,15 +384,22 @@ where $\Im\rho\geq0$, $\rho\neq0$.
 %Function $\Phi(x,\lambda)$ is called the \textit{Weyl solution} for ${\cal L}$.
 %Function $\Phi(x,\lambda)$ is called the \textit{Weyl solution} for the problem \eqref{initeq}.
 }
-\innerblock{}{
+%\innerblock{}
+{
 %The function $M(\lambda):=\Phi'(0,\lambda)$ is called the {\it Weyl function} for ${\cal L}$.
-The function $M(\lambda):=\Phi'(0,\lambda)$ is called the {\it Weyl function} for the problem \eqref{initeq}.
+
+The function 
+\[\Scale[1.3]{M(\lambda):=\Phi'(0,\lambda)}\]
+is called the {\it Weyl function} for the problem \eqref{initeq}.
 }
 
+\
 
 \innerblock[titleleft]{Inverse Problem}{
 Recover $q(x)$ by the given Weyl function $M(\lambda)$.
 }
+
+\
 
 \innerblock[titleleft]{Uniqueness Theorem}{
 %If $M(\lambda)=\widetilde M(\lambda)$, then $q(x)=\tilde q(x)$ almost everywhere for $x>0$. Thus, the Weyl function uniquely determines the boundary value problem $\cal L$.
@@ -384,10 +412,7 @@ The Weyl function uniquely determines the boundary value problem \eqref{initeq}.
 
 
 
-\block{Acknowledgements}{
-This work was supported by the Ministry of Education and Science of the
-Russian Federation (Grant 1.1436.2014K) and NANUM 2014 Travel Grant.
-}
+
  \end{columns}
 
 
