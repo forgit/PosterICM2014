@@ -45,13 +45,17 @@
 
  % Title, Author, Institute
 \title{
+%\vbox{
+%\bf Inverse problems for Sturm-Liouville operators  
+%with Bessel-type singularity inside an interval
+%}
 \vbox{
-\bf Inverse problems for Sturm-Liouville operators  
-with Bessel-type singularity inside an interval
+\bf INVERSE PROBLEMS FOR STURM--LIOUVILLE OPERATORS  
+WITH BESSEL-TYPE SINGULARITY INSIDE AND INTERVAL
 }
 }
-\author{Alexey Fedoseev}
-\institute{Saratov State University, Russia}
+\author{\bf Alexey Fedoseev}
+\institute{\bf Saratov State University, Russia}
 %\titlegraphic{LogoGraphic Inserted Here}
 
  %Choose Layout
@@ -59,7 +63,8 @@ with Bessel-type singularity inside an interval
 
 \usetheme{Board}
 %\usetheme{Rays}
-%\usecolorstyle{Russia}
+%\usetheme{Wave}
+%\usecolorstyle{Denmark}
 \tikzposterlatexaffectionproofoff
 
 \begin{document}
@@ -73,7 +78,7 @@ with Bessel-type singularity inside an interval
 
 \column{0.5}
 
-\block{\Huge What is Inverse Problem?}{
+\block{\huge What is Inverse Problem?}{
 %\innerblock{}
 \Large
 Inverse problems are concerned with determining causes for a desired or an observed effect.
@@ -102,30 +107,32 @@ Inverse problems are concerned with determining causes for a desired or an obser
 
 The situation in which the parameters or sources are directly accessible by measurement is called direct measurement. However, in many cases, the information searched for is not directly measurable. Instead, it is physically connected to other measurable values. We call this situation indirect measurement. 
 %Though these measurable values are evidently dependent on the physics of the studied phenomenon, they are also dependent on the measurement instruments employed. 
-The laws of physics that link observable information to the values searched for are generally mathematically complex, using, for example, integral equations or partial derivatives. The solution to a problem that calculates observable effects from unknown values, or a direct problem, is often simpler 
+The laws of physics that link observable information to the values searched for are generally mathematically complex, using, for example, integral equations or partial derivatives. The solution of a problem that calculates observable effects from unknown values, or a direct problem, is often simpler 
 %and more easily mastered 
 than that of an inverse problem, which calculates unknown values from observable effects.
 }
 
 
-\block{\huge Neptune}{
+\block{\huge The Planet}{
 \Large
 The discovery of the planet Neptune is a famous example of an inverse problem. At the beginning of the 19th century, the most distant discovered planet was Uranus. When astronomers applied Newton's theory of universal gravitation to the movement of Uranus, the calculations did not match the observed orbit and movement. 
 
 
 
-\begin{tikzfigure}[Neptune]
+\begin{tikzfigure}[The planet Neptune]
 \includegraphics[scale=1.5]{Neptune.pdf}
 \end{tikzfigure}
 
 
 
-In 1844 a French mathematician Urbain Le Verrier began to labor away at this calculation, using inverse perturbations of features (mass, orbit, current position) of the hypothetical planet assumed to produce Uranus' observed irregularities. In his report to the Academy of Sciences on August 31, 1846, Le Verrier presented the orbital elements of this new planet. Then, on September 23 the Berlin astronomer Galle received from Le Verrier a letter detailing its predicted position and succeeded in observing the object.
+In 1844 a French mathematician Urbain Le Verrier began to work at this calculation, using inverse perturbations of features (mass, orbit, current position) of the hypothetical planet assumed to produce Uranus' observed irregularities. In his report to the Academy of Sciences on August 31, 1846, Le Verrier presented the orbital elements of this new planet. 
+Later, using the predicted position, the Berlin astronomer Galle successfully observed the planet Neptune.
+%Then, on September 23 the Berlin astronomer Galle received from Le Verrier a letter detailing its predicted position and succeeded in observing the object.
 }
 
 
 
-\block{\huge First Result}{
+\block{\huge The First Result}{
 \Large
 The inverse spectral problems theory was discovered and introduced by Soviet-Armenian astrophysicist Victor Ambartsumian.
 
@@ -152,10 +159,13 @@ $\lambda_n=n^2,\;n \ge 0,$ then $q(x)=0$ a.e. on $(0,\pi)$.
 During the fifteen years nobody has taken notice of that paper. However in 1944 that work was found by Swedish mathematicians who have obtained many interesting results related to the ''inverse Sturm-Liouville problem`` and thus that paper became the foundation of an entire discipline.
 }
 
-
+\block{Acknowledgements}{
+This work was supported by the Ministry of Education and Science of the
+Russian Federation (Grant 1.1436.2014K) and NANUM 2014 Travel Grant.
+}
 
 \block{\refname}{
-\small
+%\small
 %[1] Fedoseev A. bla-bla-bla in mechanics. Mega J. 2013
 %
 %[2] Fedoseev A. bla-bla-bla in mechanics. Mega J. 2013
@@ -164,29 +174,26 @@ During the fifteen years nobody has taken notice of that paper. However in 1944 
 
 {\def\section*#1{}
 \begin{thebibliography}{100}
+\bibitem{fedoseev-cejm-13}
+	Fedoseev A. An inverse problem for Sturm--Liouville operators on the half-line having Bessel-type singularity in an interior point, Cent. Eur. J. Math., vol. 11, num. 12, 2013, 2203-2214.
+\bibitem{yurko-freiling-99} 
+	Freiling G., Yurko V. A.,  Reconstructing parameters of a medium from incomplete spectral information, Results Math., 1999, 35, 228-249
 \bibitem{lapwood81} 	
 	Lapwood F. R., Usami T., Free Oscillations of the Earth, Cambridge University Press, Cambridge, 1981
 \bibitem{const98} 		
 	Constantin A., On the inverse spectral problem for the Camassa-Holm equation, J. Funct. Anal., 1998, 155, 352-363	
-\bibitem{yurko-freiling-99} 
-	Freiling G., Yurko V. A.,  Reconstructing parameters of a medium from incomplete spectral information, Results Math., 1999, 35, 228-249
-\bibitem{fedoseev-izvsgu-13}
-    Fedoseev A.E. Necessary and Sufficient Conditions for the Solvability of the Inverse Problem for Sturm-Liouville Operators with a Nonintegrable Singularity Inside a Finite Interval, Izv. Saratov. Univ. Mat. Mekh. Inform., vol. 13, num. 3, 2013, 59-64 (in Russian).
-\bibitem{fedoseev-cejm-13}
-\textbf{Fedoseev A. An inverse problem for Sturm–Liouville operators on the half-line having Bessel-type singularity in an interior point, Cent. Eur. J. Math., vol. 11, num. 12, 2013, 2203-2214.}
-\bibitem{fedoseev-izvsgu-12}
-    Fedoseev A.E. Inverse problem for Sturm-Liouville operator on the half-line  having nonintegrable singularity, in an interior point, Izv. Saratov. Univ. Mat. Mekh. Inform., vol. 12, num. 4, 2012, 49-55 (in Russian).        
-\bibitem{fedoseev-tamkang-11}
-\textbf{Fedoseev A. Inverse problems for differential equations on the half-line having a singularity in an interior point, Tamkang J. Math., vol. 42, num. 3, 2011, 343-354.}
+%\bibitem{fedoseev-izvsgu-13}
+%    Fedoseev A.E. Necessary and Sufficient Conditions for the Solvability of the Inverse Problem for Sturm-Liouville Operators with a Nonintegrable Singularity Inside a Finite Interval, Izv. Saratov. Univ. Mat. Mekh. Inform., vol. 13, num. 3, 2013, 59-64 (in Russian).
+%\bibitem{fedoseev-izvsgu-12}
+%    Fedoseev A.E. Inverse problem for Sturm-Liouville operator on the half-line  having nonintegrable singularity, in an interior point, Izv. Saratov. Univ. Mat. Mekh. Inform., vol. 12, num. 4, 2012, 49-55 (in Russian).        
+%\bibitem{fedoseev-tamkang-11}
+%\textbf{Fedoseev A. Inverse problems for differential equations on the half-line having a singularity in an interior point, Tamkang J. Math., vol. 42, num. 3, 2011, 343-354.}
     
 \end{thebibliography}
 }
 }
 
-\block{Acknowledgements}{
-This work was supported by the Ministry of Education and Science of the
-Russian Federation (Grant 1.1436.2014K) and NANUM 2014 Travel Grant.
-}
+
 
 \column{0.5}
 
@@ -233,20 +240,27 @@ Russian Federation (Grant 1.1436.2014K) and NANUM 2014 Travel Grant.
 \block{\huge The Problem}{
 \Large
 Consider the boundary value problem  ${\cal L=L}(q)$
+%\begin{equation}
+%\LARGE
+%\begin{cases}
+%-y''+\Big(\dfrac{\nu_0}{(x-a)^2}+q(x)\Big)y=\lambda y,\quad x>0,\label{initeq}\\
+%y(0)=0
+%\end{cases}
+%\end{equation}
 \begin{equation}
 \LARGE
-\begin{cases}
--y''+\Big(\dfrac{\nu_0}{(x-a)^2}+q(x)\Big)y=\lambda y,\quad x>0,\\
-y(0)=0
-\end{cases}
-\label{initeq}
+-y''+\Big(\dfrac{\nu_0}{(x-a)^2}+q(x)\Big)y=\lambda y,\quad x>0,\label{initeq}
 \end{equation}
+\[\Scale[1.3]{y(0)=0}\]
+
+
+
 %Consider the differential equation
 %\begin{equation}
 %\ell y = -y''+\Big(\frac{\nu_0}{(x-a)^2}+q(x)\Big)y=\lambda y,\quad x>0,
 %\label{initeq}
 %\end{equation}
-on the half-line with a Bessel-type singularity at an interior point $a>0$ and an additional \textit{matching conditions} near the singular point $x=a$ (see below). 
+on the half-line with a Bessel-type singularity  at an interior point $a>0$ and additional \textit{matching conditions} near the singular point $x=a$ (see \cite{fedoseev-cejm-13}). 
 
 
 
@@ -264,7 +278,7 @@ $q(x)|x-~a|^{\min(0,1-2Re\,\nu)} \in L(0,T)$ for some $T>a$ and $q(x)\in L(T,\in
 %\]
 
 \begin{tikzfigure}[$a\in(0,\infty)$]
-\begin{tikzpicture}[scale=3]
+\begin{tikzpicture}[scale=2]
 \draw [->, color=gray,thick] (0,0) node[below] {$0$}-- (5,0) node[below] {$x$};
 \node[shape=circle,fill=red,scale=0.3] at (2,0) {};
 \node[below,color=gray] at (2,-0.1) {$a$};
@@ -356,7 +370,7 @@ We consider the most difficult special case when
 %$|\xi_{jj}|>|\xi_{12}|>0$, since in this case 
 the discrete spectrum is unbounded and essential qualitative modifications in the investigation of the direct and inverse problems are arised. 
 %To be definite we set $a_{12}=0$ (the other case requires minor modifications).
-\begin{tikzfigure}[The spectrum of boundary value problem {\cal L}.]
+\begin{tikzfigure}[The spectrum of the boundary value problem $\cal L$.]
 \includegraphics[scale=2]{spectra.pdf}
 \end{tikzfigure}
 }
@@ -388,6 +402,7 @@ where $\Im\rho\geq0$, $\rho\neq0$.
 {
 %The function $M(\lambda):=\Phi'(0,\lambda)$ is called the {\it Weyl function} for ${\cal L}$.
 
+
 The function 
 \[\Scale[1.3]{M(\lambda):=\Phi'(0,\lambda)}\]
 is called the {\it Weyl function} for the problem \eqref{initeq}.
@@ -403,8 +418,7 @@ Recover $q(x)$ by the given Weyl function $M(\lambda)$.
 
 \innerblock[titleleft]{Uniqueness Theorem}{
 %If $M(\lambda)=\widetilde M(\lambda)$, then $q(x)=\tilde q(x)$ almost everywhere for $x>0$. Thus, the Weyl function uniquely determines the boundary value problem $\cal L$.
-%The Weyl function uniquely determines the boundary value problem $\cal L$.
-The Weyl function uniquely determines the boundary value problem \eqref{initeq}.
+The Weyl function uniquely determines the boundary value problem $\cal L$.
 }
 
 }
